@@ -3,23 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JavaSE基础 day05 | Rorschach</title>
+  <title>JavaSE基础 day01 | Rorschach</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="8 继承概述12class student extends person&amp;#123;&amp;#125; 子类继承父类继承的好处：  提高了代码的复用性。 让类与类之间产生了联系，给第三个特性多态提供了前提。     java中支持单继承，不直接支持多继承，对c+中多继承机制进行改良。  单继承：一个子类只能有">
+  <meta name="description" content="1.1 人机交互三种技术架构  JavaEE 企业 JavaSE 标准 JavaME 小型  1.2 JAVA 语言的跨平台性通过虚拟机 JVM  根据不同的平台安装虚拟机版本 1.3 JAVA语言环境搭建 jre （java runtime environment）java运行环境 （包括JVM，类库） jdk （j">
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaSE基础 day05">
-<meta property="og:url" content="https://MaskTaoX.github.io/2017/11/23/day05  8继承/index.html">
+<meta property="og:title" content="JavaSE基础 day01">
+<meta property="og:url" content="https://MaskTaoX.github.io/2017/11/10/day01  基础环境配置/index.html">
 <meta property="og:site_name" content="Rorschach">
-<meta property="og:description" content="8 继承概述12class student extends person&amp;#123;&amp;#125; 子类继承父类继承的好处：  提高了代码的复用性。 让类与类之间产生了联系，给第三个特性多态提供了前提。     java中支持单继承，不直接支持多继承，对c+中多继承机制进行改良。  单继承：一个子类只能有一个直接父类。 多继承：一个子类可以有多个直接父类（java不允许，进行改良）。不直接支持是因是">
-<meta property="og:image" content="https://i.loli.net/2017/11/23/5a16c340f28aa.png">
-<meta property="og:image" content="https://i.loli.net/2017/11/23/5a16c4d7915ef.png">
-<meta property="og:image" content="https://i.loli.net/2017/11/23/5a16cc3ac41a0.png">
-<meta property="og:updated_time" content="2017-11-25T09:24:08.077Z">
+<meta property="og:description" content="1.1 人机交互三种技术架构  JavaEE 企业 JavaSE 标准 JavaME 小型  1.2 JAVA 语言的跨平台性通过虚拟机 JVM  根据不同的平台安装虚拟机版本 1.3 JAVA语言环境搭建 jre （java runtime environment）java运行环境 （包括JVM，类库） jdk （java development kit）java工具包  安装了jdk就不用安装">
+<meta property="og:updated_time" content="2017-11-25T09:33:31.948Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaSE基础 day05">
-<meta name="twitter:description" content="8 继承概述12class student extends person&amp;#123;&amp;#125; 子类继承父类继承的好处：  提高了代码的复用性。 让类与类之间产生了联系，给第三个特性多态提供了前提。     java中支持单继承，不直接支持多继承，对c+中多继承机制进行改良。  单继承：一个子类只能有一个直接父类。 多继承：一个子类可以有多个直接父类（java不允许，进行改良）。不直接支持是因是">
-<meta name="twitter:image" content="https://i.loli.net/2017/11/23/5a16c340f28aa.png">
+<meta name="twitter:title" content="JavaSE基础 day01">
+<meta name="twitter:description" content="1.1 人机交互三种技术架构  JavaEE 企业 JavaSE 标准 JavaME 小型  1.2 JAVA 语言的跨平台性通过虚拟机 JVM  根据不同的平台安装虚拟机版本 1.3 JAVA语言环境搭建 jre （java runtime environment）java运行环境 （包括JVM，类库） jdk （java development kit）java工具包  安装了jdk就不用安装">
   
     <link rel="alternative" href="/atom.xml" title="Rorschach" type="application/atom+xml">
   
@@ -237,11 +233,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-day05  8继承" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-day01  基础环境配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/23/day05  8继承/" class="article-date">
-      <time datetime="2017-11-23T13:47:23.000Z" itemprop="datePublished">2017-11-23</time>
+      <a href="/2017/11/10/day01  基础环境配置/" class="article-date">
+      <time datetime="2017-11-10T12:54:06.000Z" itemprop="datePublished">2017-11-10</time>
 </a>
     </div>
   
@@ -254,7 +250,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaSE基础 day05
+      JavaSE基础 day01
     </h1>
   
 
@@ -279,50 +275,53 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="8-继承概述"><a href="#8-继承概述" class="headerlink" title="8 继承概述"></a>8 继承概述</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> <span class="keyword">extends</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>子类继承父类<br>继承的好处：</p>
+        <h2 id="1-1-人机交互"><a href="#1-1-人机交互" class="headerlink" title="1.1 人机交互"></a>1.1 人机交互</h2><p>三种技术架构</p>
 <ul>
-<li>提高了代码的复用性。</li>
-<li>让类与类之间产生了联系，给第三个特性多态提供了前提。  </li>
+<li>JavaEE 企业</li>
+<li>JavaSE 标准</li>
+<li>JavaME 小型</li>
 </ul>
-<hr>
-<p>java中支持单继承，不直接支持多继承，对c+中多继承机制进行改良。</p>
-<ul>
-<li>单继承：一个子类只能有一个直接父类。</li>
-<li>多继承：一个子类可以有多个直接父类（java不允许，进行改良）。不直接支持是因是多个为父类中有相同成员，会产生调用的不确定性。</li>
-<li>在Java中时通过“多实现”的方式实现。</li>
+<h2 id="1-2-JAVA-语言的跨平台性"><a href="#1-2-JAVA-语言的跨平台性" class="headerlink" title="1.2 JAVA 语言的跨平台性"></a>1.2 JAVA 语言的跨平台性</h2><p>通过虚拟机 JVM <font color="red"> 根据不同的平台安装虚拟机版本<font color="black"></font></font></p>
+<h2 id="1-3-JAVA语言环境搭建"><a href="#1-3-JAVA语言环境搭建" class="headerlink" title="1.3 JAVA语言环境搭建"></a>1.3 JAVA语言环境搭建</h2><ul>
+<li>jre （java runtime environment）java运行环境 （包括JVM，类库）</li>
+<li>jdk （java development kit）java工具包</li>
 </ul>
-<hr>
-<p>java支持多层继承。c继承b，b继承a，这样就会出现继承体系。<br><strong>当要使用一个继承体系时</strong></p>
-<ul>
-<li>查看该体系中的顶层类，了解该体系的基本功能。</li>
-<li>创建体系中的最子类对象，完成功能的使用。</li>
-</ul>
-<hr>
-<p><strong>什么时候定义继承？</strong>  </p>
-<p>类与类之间存在着继承关系，xxx是yyy中的一种，xxx extends yyy。</p>
-<hr>
-<ul>
-<li>当本类中成员和局部变量同名用this区分。</li>
-<li>当子父类中的成员变量同名用super区分父类。<br>this 和 super 很相似。super代表父类。<br><em>this代表本类对象的引用，super代表父类空间。</em><br><strong>子类不能直接访问父类中私有的内容</strong><br><img src="https://i.loli.net/2017/11/23/5a16c340f28aa.png" alt="内存图解.png"><br>左上是栈，右上是堆，下是方法区<br><img src="https://i.loli.net/2017/11/23/5a16c4d7915ef.png" alt="子类父类方法重名.png"></li>
-</ul>
-<blockquote>
-<p>如果子类父类方法重名，调用子类时，自然会用子类的方法，并不会再去调用父类重名的方法。这叫做<strong>覆盖操作</strong>，这是函数在子父类中特性。</p>
-</blockquote>
-<hr>
-<p>函数的两个特性：</p>
-<ol>
-<li>重载，同一个类中。</li>
-<li>覆盖。子类中，又叫重写。  </li>
-</ol>
-<p>覆盖注意事项：</p>
-<ul>
-<li>子类覆盖父类，子类权限必须大于等于父类的权限。</li>
-<li>静态只能覆盖静态，或者被静态覆盖。</li>
-</ul>
-<hr>
-<p><strong>覆盖的应用</strong><br>什么时候使用？<br>当对一个类进行子类的扩展时，子类需要保留父类的功能声明，但是要定义子类中该功能的特有内容时，就会使用覆盖操作。<br><img src="https://i.loli.net/2017/11/23/5a16cc3ac41a0.png" alt="子类覆盖父类功能，并保留原有功能.png"><strong><font color="red">super.show();</font></strong><font color="black"></font></p>
+<p>安装了jdk就不用安装jre了</p>
+<p>java开发工具包包括1.编译工具（javac.exe）2.打包工具（jar.exe）</p>
+<p><font color="red"> javaFX SDK 脚本语言 应用于web 图形界面制作 是一种前端语言</font></p>
+<font color="black">
 
+<h2 id="1-5-jdk命令行工具"><a href="#1-5-jdk命令行工具" class="headerlink" title="1.5 jdk命令行工具"></a>1.5 jdk命令行工具</h2><p>命令存放在bin目录，即jdk的开发工具</p>
+<h2 id="1-6-命令行简介"><a href="#1-6-命令行简介" class="headerlink" title="1.6 命令行简介"></a>1.6 命令行简介</h2><p>dos命令行</p>
+<ul>
+<li>dir：列出当前目录下的文件</li>
+<li>rd：删除目录</li>
+<li>md：创建目录</li>
+<li>del：删除目录</li>
+<li>cd：进入指定目录</li>
+<li>help：显示所有命令的注解</li>
+</ul>
+<h2 id="1-7环境变量的配置"><a href="#1-7环境变量的配置" class="headerlink" title="1.7环境变量的配置"></a>1.7环境变量的配置</h2><ul>
+<li>在任何人目录下都可以执行命令 对系统变量path的操作     </li>
+<li>找到jdk/bin的路径，将其复制到电脑属性–高级系统设置–环境变量–系统变量–找到path并添加jdk/bin的路径         </li>
+<li>检查路径配置成功 win+r 任意路径下键入javac</li>
+</ul>
+<h2 id="1-8-环境配置技巧"><a href="#1-8-环境配置技巧" class="headerlink" title="1.8 环境配置技巧"></a>1.8 环境配置技巧</h2><ul>
+<li>新建一个环境变量JAVA_HOME=d:\All Java In \jdk-9.0.1</li>
+<li>path<font color="red">=%JAVA_HOME%\bin                                      <font color="black">。加%会被识别为环境变量<h2 id="1-10-java语言"><a href="#1-10-java语言" class="headerlink" title="1.10 java语言"></a>1.10 java语言</h2></font></font></li>
+</ul>
+<ul>
+<li>编辑：后缀txt保存为.java。（保存的是源代码，需要翻译成计算机语言）</li>
+<li>翻译：用javac进行编译 DOS命令“javac 123.java”—生成<font color="red">类名.class<font color="black"></font></font></li>
+<li>运行：用java运行  DOS命令“java<font color="red"> 类名<font color="black">”</font></font></li>
+</ul>
+<h2 id="1-13classpath环境变量"><a href="#1-13classpath环境变量" class="headerlink" title="1.13classpath环境变量"></a>1.13classpath环境变量</h2><ul>
+<li>set classpath=c:\myclass//虚拟机去此地寻找，找不到报错！</li>
+<li>set classpath=c:\myclass;//虚拟机去此地找，找不到在当前目录再找一次</li>
+<li><font color="purple"> <strong>classpath就是规定虚拟机去哪执行程序</strong></font></li>
+<li><http:\\wwww.oracle.com></http:\\wwww.oracle.com></li>
+</ul>
+</font>
       
       
         <div class="page-reward">
@@ -377,13 +376,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/11/23/day05  8继承/">JavaSE基础 day05</a></p>
+        <p><span>本文标题:</span><a href="/2017/11/10/day01  基础环境配置/">JavaSE基础 day01</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Rorschach 的个人博客">Rorschach</a></p>
-        <p><span>发布时间:</span>2017年11月23日 - 21时47分</p>
-        <p><span>最后更新:</span>2017年11月25日 - 17时24分</p>
+        <p><span>发布时间:</span>2017年11月10日 - 20时54分</p>
+        <p><span>最后更新:</span>2017年11月25日 - 17时33分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/11/23/day05  8继承/" title="JavaSE基础 day05">https://MaskTaoX.github.io/2017/11/23/day05  8继承/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2017/11/23/day05  8继承/　　作者: Rorschach" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/11/10/day01  基础环境配置/" title="JavaSE基础 day01">https://MaskTaoX.github.io/2017/11/10/day01  基础环境配置/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2017/11/10/day01  基础环境配置/　　作者: Rorschach" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -396,11 +395,15 @@
 
 <nav id="article-nav">
   
-  
-    <a href="/2017/11/22/day04  6.1面向对象/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaSE基础 day04</div>
-      <strong class="article-nav-caption">></strong>
+    <a href="/2017/11/16/day02  4.2函数4.3数组/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JavaSE基础 day02
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -409,7 +412,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-继承概述"><span class="toc-number">1.</span> <span class="toc-text">8 继承概述</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-人机交互"><span class="toc-number">1.</span> <span class="toc-text">1.1 人机交互</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-JAVA-语言的跨平台性"><span class="toc-number">2.</span> <span class="toc-text">1.2 JAVA 语言的跨平台性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-JAVA语言环境搭建"><span class="toc-number">3.</span> <span class="toc-text">1.3 JAVA语言环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-jdk命令行工具"><span class="toc-number">4.</span> <span class="toc-text">1.5 jdk命令行工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-命令行简介"><span class="toc-number">5.</span> <span class="toc-text">1.6 命令行简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7环境变量的配置"><span class="toc-number">6.</span> <span class="toc-text">1.7环境变量的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8-环境配置技巧"><span class="toc-number">7.</span> <span class="toc-text">1.8 环境配置技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-10-java语言"><span class="toc-number">8.</span> <span class="toc-text">1.10 java语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-13classpath环境变量"><span class="toc-number">9.</span> <span class="toc-text">1.13classpath环境变量</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -475,13 +478,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/11/16/day02  4.2函数4.3数组/" title="上一篇: JavaSE基础 day02">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/11/22/day04  6.1面向对象/" title="下一篇: JavaSE基础 day04">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/day05  8继承/">JavaSE基础 day05</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/22/day04  6.1面向对象/">JavaSE基础 day04</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/day02  4.2函数4.3数组/">JavaSE基础 day02</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/10/day01  基础环境配置/">JavaSE基础 day01</a></li></ul>

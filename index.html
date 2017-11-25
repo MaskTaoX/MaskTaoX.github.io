@@ -152,7 +152,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/JAVA学习/" style="font-size: 10px;">JAVA学习</a>
+                        <a href="/tags/学习/" style="font-size: 10px;">学习</a>
                     </div>
                 </section>
                 
@@ -315,13 +315,13 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a><a class="article-category-link" href="/categories/JAVA/二级目录/">二级目录</a>
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA学习/">JAVA学习</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
     </div>
 
       
@@ -541,13 +541,218 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a><a class="article-category-link" href="/categories/JAVA/二级目录/">二级目录</a>
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA学习/">JAVA学习</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-day02  4.2函数4.3数组" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/16/day02  4.2函数4.3数组/" class="article-date">
+      <time datetime="2017-11-16T12:45:46.000Z" itemprop="datePublished">2017-11-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/day02  4.2函数4.3数组/">JavaSE基础 day02</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="4-2-2函数-格式"><a href="#4-2-2函数-格式" class="headerlink" title="4.2.2函数-格式"></a>4.2.2函数-格式</h2><p>定义函数的格式<br>修饰符 返回值类型 函数名（参数类型 形参1.参数类型 形参2….）<br>{  </p>
+<pre><code>执行语句;
+return 返回值;
+</code></pre><p>}<br>函数名称要具有可读性<br>第一个单词小写剩下的全部大写</p>
+<h2 id="4-2-3函数-细节"><a href="#4-2-3函数-细节" class="headerlink" title="4.2.3函数-细节"></a>4.2.3函数-细节</h2><ul>
+<li>函数只能调用函数，不可以在函数内部定义函数</li>
+<li>定义函数时，函数的结果要返回给调用者</li>
+</ul>
+<h2 id="4-2-6函数-两个明确"><a href="#4-2-6函数-两个明确" class="headerlink" title="4.2.6函数-两个明确"></a>4.2.6函数-两个明确</h2><p><strong>思路：既然是功能定义，就是可以用户函数来体现。</strong><br>我们通过两个明确来完成函数定义</p>
+<ul>
+<li>明确1：这个功能结果是什么</li>
+<li>明确2：这个功能是否需要未知内容来参与运算  </li>
+</ul>
+<h2 id="4-2-10函数重载"><a href="#4-2-10函数重载" class="headerlink" title="4.2.10函数重载"></a>4.2.10函数重载</h2><p>在同一各类中，允许存在一个以上的同名函数，他们只需要参数个数或者参数类型不同即可</p>
+<h2 id="4-3数组内存划分"><a href="#4-3数组内存划分" class="headerlink" title="4.3数组内存划分"></a>4.3数组内存划分</h2><p>![image]（）</p>
+<ul>
+<li>寄存器</li>
+<li>本地方法区</li>
+<li>方法区</li>
+<li>栈内存：存储的都是局部变量（定义在方法中的变量）而且变量所属作用域一旦结束，该变量就自动释放。</li>
+<li>堆内存：<ul>
+<li>存储的是数组和对象，凡是new建立的都在堆中；</li>
+<li>每一个实体都有内存地址，有首地址值；</li>
+<li>实体中的变量都有默认初始化值实体不在被使用，会在不确定的时间内被垃圾回收器回收；<br><a href="https://i.loli.net/2017/11/13/5a0995ab09ae6.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2017/11/13/5a0995ab09ae6.png" alt="QQ截图20171113205240.png"></a><blockquote>
+<p><strong>int[] x=new int[3];</strong> 对其内存的描述<br>1.主函数先进栈，运行到数组定义<br>2.在堆中给实体分配内存地址,默认初始化值<br>3.堆中地址由栈中x操作</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a><em>注意</em></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int[] y=new int[3];  </span><br><span class="line">x[0]=9;  </span><br><span class="line">y[0]=34; </span><br><span class="line">x=y;&gt;</span><br></pre></td></tr></table></figure>
+<p><font color="red"> 此时x[0]=34,<br><strong>因为y把地址赋给x，x此时也指向y所指向的内存</strong></font></p>
+<font color="black">
+
+<h2 id="5-1数组第二种定义方式"><a href="#5-1数组第二种定义方式" class="headerlink" title="5.1数组第二种定义方式"></a>5.1数组第二种定义方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.int[] x=new int[3];//需要一个容器，但是存储数据不明确</span><br><span class="line">2.int[] x=new int[]&#123;0,2,3,4&#125;;//需要一个容器，存储数据已知</span><br><span class="line">  int[] x=&#123;23,45,676,,8,98&#125;;</span><br></pre></td></tr></table></figure>
+</font>
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-day01  基础环境配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/10/day01  基础环境配置/" class="article-date">
+      <time datetime="2017-11-10T12:54:06.000Z" itemprop="datePublished">2017-11-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/10/day01  基础环境配置/">JavaSE基础 day01</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="1-1-人机交互"><a href="#1-1-人机交互" class="headerlink" title="1.1 人机交互"></a>1.1 人机交互</h2><p>三种技术架构</p>
+<ul>
+<li>JavaEE 企业</li>
+<li>JavaSE 标准</li>
+<li>JavaME 小型</li>
+</ul>
+<h2 id="1-2-JAVA-语言的跨平台性"><a href="#1-2-JAVA-语言的跨平台性" class="headerlink" title="1.2 JAVA 语言的跨平台性"></a>1.2 JAVA 语言的跨平台性</h2><p>通过虚拟机 JVM <font color="red"> 根据不同的平台安装虚拟机版本<font color="black"></font></font></p>
+<h2 id="1-3-JAVA语言环境搭建"><a href="#1-3-JAVA语言环境搭建" class="headerlink" title="1.3 JAVA语言环境搭建"></a>1.3 JAVA语言环境搭建</h2><ul>
+<li>jre （java runtime environment）java运行环境 （包括JVM，类库）</li>
+<li>jdk （java development kit）java工具包</li>
+</ul>
+<p>安装了jdk就不用安装jre了</p>
+<p>java开发工具包包括1.编译工具（javac.exe）2.打包工具（jar.exe）</p>
+<p><font color="red"> javaFX SDK 脚本语言 应用于web 图形界面制作 是一种前端语言</font></p>
+<font color="black">
+
+<h2 id="1-5-jdk命令行工具"><a href="#1-5-jdk命令行工具" class="headerlink" title="1.5 jdk命令行工具"></a>1.5 jdk命令行工具</h2><p>命令存放在bin目录，即jdk的开发工具</p>
+<h2 id="1-6-命令行简介"><a href="#1-6-命令行简介" class="headerlink" title="1.6 命令行简介"></a>1.6 命令行简介</h2><p>dos命令行</p>
+<ul>
+<li>dir：列出当前目录下的文件</li>
+<li>rd：删除目录</li>
+<li>md：创建目录</li>
+<li>del：删除目录</li>
+<li>cd：进入指定目录</li>
+<li>help：显示所有命令的注解</li>
+</ul>
+<h2 id="1-7环境变量的配置"><a href="#1-7环境变量的配置" class="headerlink" title="1.7环境变量的配置"></a>1.7环境变量的配置</h2><ul>
+<li>在任何人目录下都可以执行命令 对系统变量path的操作     </li>
+<li>找到jdk/bin的路径，将其复制到电脑属性–高级系统设置–环境变量–系统变量–找到path并添加jdk/bin的路径         </li>
+<li>检查路径配置成功 win+r 任意路径下键入javac</li>
+</ul>
+<h2 id="1-8-环境配置技巧"><a href="#1-8-环境配置技巧" class="headerlink" title="1.8 环境配置技巧"></a>1.8 环境配置技巧</h2><ul>
+<li>新建一个环境变量JAVA_HOME=d:\All Java In \jdk-9.0.1</li>
+<li>path<font color="red">=%JAVA_HOME%\bin                                      <font color="black">。加%会被识别为环境变量<h2 id="1-10-java语言"><a href="#1-10-java语言" class="headerlink" title="1.10 java语言"></a>1.10 java语言</h2></font></font></li>
+</ul>
+<ul>
+<li>编辑：后缀txt保存为.java。（保存的是源代码，需要翻译成计算机语言）</li>
+<li>翻译：用javac进行编译 DOS命令“javac 123.java”—生成<font color="red">类名.class<font color="black"></font></font></li>
+<li>运行：用java运行  DOS命令“java<font color="red"> 类名<font color="black">”</font></font></li>
+</ul>
+<h2 id="1-13classpath环境变量"><a href="#1-13classpath环境变量" class="headerlink" title="1.13classpath环境变量"></a>1.13classpath环境变量</h2><ul>
+<li>set classpath=c:\myclass//虚拟机去此地寻找，找不到报错！</li>
+<li>set classpath=c:\myclass;//虚拟机去此地找，找不到在当前目录再找一次</li>
+<li><font color="purple"> <strong>classpath就是规定虚拟机去哪执行程序</strong></font></li>
+<li><http:\\wwww.oracle.com></http:\\wwww.oracle.com></li>
+</ul>
+</font>
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
     </div>
 
       
