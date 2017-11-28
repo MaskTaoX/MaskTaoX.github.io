@@ -9,13 +9,13 @@
 <meta name="keywords" content="学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaSE基础 day06">
-<meta property="og:url" content="https://MaskTaoX.github.io/2017/11/27/day06 数组工具类与单例设计模式 /index.html">
+<meta property="og:url" content="https://MaskTaoX.github.io/2017/11/27/day06   数组工具类与单例设计模式 /index.html">
 <meta property="og:site_name" content="Rorschach">
 <meta property="og:description" content="数组工具对象建立工具类，类中全是静态方法   123456789class ArrayTool&amp;#123;    private ArrayTool()&amp;#123;&amp;#125;        public static void selectSort()&amp;#123;&amp;#125;    public static void getMax()&amp;#123;&amp;#125;    ...    ...&amp;#12">
 <meta property="og:image" content="https://i.loli.net/2017/11/26/5a1a310ac609f.png">
 <meta property="og:image" content="https://i.loli.net/2017/11/26/5a1a34047545a.png">
 <meta property="og:image" content="https://i.loli.net/2017/11/27/5a1c0fce409a5.png">
-<meta property="og:updated_time" content="2017-11-28T03:44:53.735Z">
+<meta property="og:updated_time" content="2017-11-28T08:11:12.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaSE基础 day06">
 <meta name="twitter:description" content="数组工具对象建立工具类，类中全是静态方法   123456789class ArrayTool&amp;#123;    private ArrayTool()&amp;#123;&amp;#125;        public static void selectSort()&amp;#123;&amp;#125;    public static void getMax()&amp;#123;&amp;#125;    ...    ...&amp;#12">
@@ -70,7 +70,7 @@
         </hgroup>
 
         
-        <p class="header-subtitle">做点好事，写进日记</p>
+        <p class="header-subtitle">博客目前存在很多问题，我会随着以后的学习不断优化改进</p>
         
         
         
@@ -156,7 +156,9 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.coolben.xyz/">许奔驰</a>
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coolben.xyz/">Coolben</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://geoch.top/">Geo</a>
                     
                     </div>
                 </section>
@@ -191,7 +193,7 @@
               <h1 class="header-author"><a href="/" title="Me">Mask</a></h1>
             </hgroup>
             
-            <p class="header-subtitle">做点好事，写进日记</p>
+            <p class="header-subtitle">博客目前存在很多问题，我会随着以后的学习不断优化改进</p>
             
             <nav class="header-menu">
                 <ul>
@@ -221,10 +223,10 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-day06 数组工具类与单例设计模式 " class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-day06   数组工具类与单例设计模式 " class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/27/day06 数组工具类与单例设计模式 /" class="article-date">
+      <a href="/2017/11/27/day06   数组工具类与单例设计模式 /" class="article-date">
       <time datetime="2017-11-27T13:27:16.000Z" itemprop="datePublished">2017-11-27</time>
 </a>
     </div>
@@ -272,7 +274,7 @@
 
 </the></li>
 </ul>
-<h2 id="数组工具类-文档注释"><a href="#数组工具类-文档注释" class="headerlink" title="数组工具类 文档注释"></a>数组工具类 文档注释</h2><p>  文档注释举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">/*  </span><br><span class="line">建立一个用于操作数组的工具类，其中包含常见的对数组操作的函数：最值，排序等。   </span><br><span class="line">@ auther 张三  </span><br><span class="line">@ version v1.0  </span><br><span class="line">*/ </span><br><span class="line">public class ArrayTool</span><br><span class="line">&#123;</span><br><span class="line">    private ArrayTool()&#123;&#125;</span><br><span class="line">    /**</span><br><span class="line">    对数组进行选择排序</span><br><span class="line">    @param arr 接受一个元素为int类型的数组。</span><br><span class="line">    */</span><br><span class="line">    public static void selectSort(int[] arr)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">    用于给数组进行元素位置的置换</span><br><span class="line">    @param arr</span><br><span class="line">    @param a</span><br><span class="line">    @param b</span><br><span class="line">    */</span><br><span class="line">    private static void swap(int[] arr,int a,int b)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">    获取指定元素在指定数组中的索引。</span><br><span class="line">    @param arr 接收数组</span><br><span class="line">    @param key 要找的元素</span><br><span class="line">    @return 返回该元素第一次出现的位置，不存在返回-1</span><br><span class="line">    */</span><br><span class="line">    public static int getIndex(int[] arr,int key)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    public static void getMax()&#123;&#125;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="数组工具类-文档注释"><a href="#数组工具类-文档注释" class="headerlink" title="数组工具类 文档注释"></a>数组工具类 文档注释</h2><p>  文档注释举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">/**  </span><br><span class="line">建立一个用于操作数组的工具类，其中包含常见的对数组操作的函数：最值，排序等。   </span><br><span class="line">@ auther 张三  </span><br><span class="line">@ version v1.0  </span><br><span class="line">*/ </span><br><span class="line">public class ArrayTool</span><br><span class="line">&#123;</span><br><span class="line">    private ArrayTool()&#123;&#125;</span><br><span class="line">    /**</span><br><span class="line">    对数组进行选择排序</span><br><span class="line">    @param arr 接受一个元素为int类型的数组。</span><br><span class="line">    */</span><br><span class="line">    public static void selectSort(int[] arr)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">    用于给数组进行元素位置的置换</span><br><span class="line">    @param arr</span><br><span class="line">    @param a</span><br><span class="line">    @param b</span><br><span class="line">    */</span><br><span class="line">    private static void swap(int[] arr,int a,int b)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">    获取指定元素在指定数组中的索引。</span><br><span class="line">    @param arr 接收数组</span><br><span class="line">    @param key 要找的元素</span><br><span class="line">    @return 返回该元素第一次出现的位置，不存在返回-1</span><br><span class="line">    */</span><br><span class="line">    public static int getIndex(int[] arr,int key)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    public static void getMax()&#123;&#125;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p>javadoc功能:公共类进行文档化。  </p>
 <p><img src="https://i.loli.net/2017/11/26/5a1a310ac609f.png" alt="javadoc功能介绍"> </p>
@@ -385,13 +387,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/11/27/day06 数组工具类与单例设计模式 /">JavaSE基础 day06</a></p>
+        <p><span>本文标题:</span><a href="/2017/11/27/day06   数组工具类与单例设计模式 /">JavaSE基础 day06</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Mask 的个人博客">Mask</a></p>
         <p><span>发布时间:</span>2017年11月27日 - 21时27分</p>
-        <p><span>最后更新:</span>2017年11月28日 - 11时44分</p>
+        <p><span>最后更新:</span>2017年11月28日 - 16时11分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/11/27/day06 数组工具类与单例设计模式 /" title="JavaSE基础 day06">https://MaskTaoX.github.io/2017/11/27/day06 数组工具类与单例设计模式 /</a>
-            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2017/11/27/day06 数组工具类与单例设计模式 /　　作者: Mask" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/11/27/day06   数组工具类与单例设计模式 /" title="JavaSE基础 day06">https://MaskTaoX.github.io/2017/11/27/day06   数组工具类与单例设计模式 /</a>
+            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2017/11/27/day06   数组工具类与单例设计模式 /　　作者: Mask" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -492,7 +494,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/27/day06 数组工具类与单例设计模式 /">JavaSE基础 day06</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/day05  8继承/">JavaSE基础 day05</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/22/day04  6.1面向对象/">JavaSE基础 day04</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/day02  4.2函数4.3数组/">JavaSE基础 day02</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/10/day01  基础环境配置/">JavaSE基础 day01</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/27/day06   数组工具类与单例设计模式 /">JavaSE基础 day06</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/day05  8继承/">JavaSE基础 day05</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/22/day04  6.1面向对象/">JavaSE基础 day04</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/day02  4.2函数4.3数组/">JavaSE基础 day02</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/10/day01  基础环境配置/">JavaSE基础 day01</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
