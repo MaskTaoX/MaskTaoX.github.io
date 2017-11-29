@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JavaSE基础 day07 | Rorschach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="继承-父子类中的构造函数，子类的实例化过程子父类中构造函数的特点。在子类构造对象时，发现，访问子类构造函数时，父类业运行了。原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。  构造函数不存在覆盖。">
+<meta name="keywords" content="学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaSE基础 day07">
+<meta property="og:url" content="https://MaskTaoX.github.io/2017/11/29/day07 面向对象第二部分（视频09）/index.html">
+<meta property="og:site_name" content="Rorschach">
+<meta property="og:description" content="继承-父子类中的构造函数，子类的实例化过程子父类中构造函数的特点。在子类构造对象时，发现，访问子类构造函数时，父类业运行了。原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。  构造函数不存在覆盖。">
+<meta property="og:image" content="https://i.loli.net/2017/11/28/5a1d1a2d5292b.png">
+<meta property="og:updated_time" content="2017-11-29T12:54:48.182Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaSE基础 day07">
+<meta name="twitter:description" content="继承-父子类中的构造函数，子类的实例化过程子父类中构造函数的特点。在子类构造对象时，发现，访问子类构造函数时，父类业运行了。原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。  构造函数不存在覆盖。">
+<meta name="twitter:image" content="https://i.loli.net/2017/11/28/5a1d1a2d5292b.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Rorschach" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Mask</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">博客目前存在很多问题，我会随着以后的学习不断优化改进</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="#" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/MaskTaoX" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/学习/" style="font-size: 10px;">学习</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coolben.xyz/">Coolben</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://geoch.top/">Geo</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">啥也不会学开发</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Mask</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Mask</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">博客目前存在很多问题，我会随着以后的学习不断优化改进</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="#" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/MaskTaoX" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-day07 面向对象第二部分（视频09）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/29/day07 面向对象第二部分（视频09）/" class="article-date">
+      <time datetime="2017-11-29T12:54:16.000Z" itemprop="datePublished">2017-11-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaSE基础 day07
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="继承-父子类中的构造函数，子类的实例化过程"><a href="#继承-父子类中的构造函数，子类的实例化过程" class="headerlink" title="继承-父子类中的构造函数，子类的实例化过程"></a>继承-父子类中的构造函数，子类的实例化过程</h2><h3 id="子父类中构造函数的特点。"><a href="#子父类中构造函数的特点。" class="headerlink" title="子父类中构造函数的特点。"></a>子父类中构造函数的特点。</h3><p>在子类构造对象时，发现，访问子类构造函数时，父类业运行了。<br><strong>原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。</strong></p>
+<blockquote>
+<p>构造函数不存在覆盖。</p>
+</blockquote>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+</the></li>
+</ul>
+<p>子类的实例化过程：子类中所有的构造函数默认都会访问父类中的空参数的构造函数。<br>举例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Fu</span><br><span class="line">&#123;</span><br><span class="line">    Fu()</span><br><span class="line">    &#123;</span><br><span class="line">       System.out.println(&quot;fu run&quot;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Zi extends Fu</span><br><span class="line">&#123;</span><br><span class="line">    Zi()</span><br><span class="line">    &#123;</span><br><span class="line">        //super(); 隐式语句</span><br><span class="line">        //其调用的就是父类中的空参数的构造函数。</span><br><span class="line">        System.out.println(&quot;zi run&quot;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class ExtendsDemo</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        new Zi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：</p>
+<blockquote>
+<p>fu run  </p>
+<h2 id="zi-run"><a href="#zi-run" class="headerlink" title="zi run  "></a>zi run  </h2></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class Fu</span><br><span class="line">&#123;</span><br><span class="line">    Fu()</span><br><span class="line">    &#123;</span><br><span class="line">       System.out.println(&quot;a fu run&quot;); </span><br><span class="line">    &#125;</span><br><span class="line">    Fu(int x)</span><br><span class="line">    &#123;</span><br><span class="line">       System.out.println(&quot;b fu run &quot;+x); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Zi extends Fu</span><br><span class="line">&#123;</span><br><span class="line">    Zi()</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;c zi run&quot;); </span><br><span class="line">    &#125;</span><br><span class="line">    Zi(int x)</span><br><span class="line">    &#123;</span><br><span class="line">        //super(x);</span><br><span class="line">        System.out.println(&quot;d zi run &quot;+x); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class ExtendsDemo</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        new Zi(6);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果  </p>
+<blockquote>
+<p>a fu run<br>d zi run 6   </p>
+</blockquote>
+<p>子类构造函数先执行隐式语句super();调用父类空参构造函数。如果想调用父类非空构造函数，只需要指定super语句即可，如代码注释处所示，其运行结果为</p>
+<blockquote>
+<p>b fu run 6<br>d zi run 6   </p>
+</blockquote>
+<h3 id="为什么子类实例化要访问父类构造函数？"><a href="#为什么子类实例化要访问父类构造函数？" class="headerlink" title="为什么子类实例化要访问父类构造函数？"></a>为什么子类实例化要访问父类构造函数？</h3><p>原因：<br>子类继承父类，获取到了父类中的内容（属性），所以在使用父类内容之前，要先看看父类中是如何对自己的内容初始化的。<br>所以子类在构造对象时必须访问父类的构造函数。<br>为了要完成这个必须的动作，就在子类的构造函数中加了super()语句。<br>如果父类中没有定义空参数构造函数，那么子类中构造函数必须用super语句明确要调用父类中哪个构造函数。<br>同时子类构造函数中如果使用this调用了本类的构造函数时，那么super就没有了，因为super和this都只能定义第一行。所以只能有一个。但是可以保证的是，子类中肯定会有其他的构造函数访问父类的构造函数。<br><strong>注意：</strong><br>super语句必须定义在子类构造函数的第一行。因为父类的初始化动作要先完成。  </p>
+<hr>
+<p>Object类（上帝类），所有的类都继承它。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Demo // extend Object</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="子类实例化的内存图解"><a href="#子类实例化的内存图解" class="headerlink" title="子类实例化的内存图解"></a>子类实例化的内存图解</h3><p>例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">class Fu</span><br><span class="line">&#123;</span><br><span class="line">    Fu()</span><br><span class="line">    &#123;</span><br><span class="line">      show(); </span><br><span class="line">    &#125;</span><br><span class="line">    void show()</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;fu show&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Zi extends Fu</span><br><span class="line">&#123;</span><br><span class="line">    int num = 8;</span><br><span class="line">    Zi()</span><br><span class="line">    &#123;</span><br><span class="line">        super();</span><br><span class="line">        //通过super初始化父类内容时，子类的成员变量并未显示初始化，等super()父类初始化完毕后，才进行子类成员变量显示初始化。</span><br><span class="line">        system.out.println(num);</span><br><span class="line">        return;//隐式语句</span><br><span class="line">    &#125;</span><br><span class="line">    void show()//覆盖</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;zi show &quot;+num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class ExtendsDemo</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Zi z=new Zi();</span><br><span class="line">        z.show();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>结果：</p>
+<blockquote>
+<p>zi show 0<br>8<br>zi show 8   </p>
+</blockquote>
+<p><img src="https://i.loli.net/2017/11/28/5a1d1a2d5292b.png" alt="内存图解.png"><br>步骤：</p>
+<ul>
+<li>内存为主函数所在的类 ExtendsDemo 开辟空间，并加载默认构造函数。</li>
+<li>静态方法区为主函数开辟空间。</li>
+<li>main进栈 运行 Zi z; 由于Zi继承了Fu，所以方法区先加载 class Fu 。</li>
+<li>加载完父类后加载子类。</li>
+<li>进行 new Zi()对象的建立，堆中对z对象默认初始化，num=0。</li>
+<li>默认初始化之后，new Zi()调用 class Zi中的构造器(构造函数)，Zi(){}进栈。</li>
+<li>Zi执行super()语句时，class Fu中构造函数Fu()进栈，Fu中的show方法调用，但是<strong>当子父类中方法名称相同时会有覆盖，子类同名方法覆盖了父类，并且show()语句其实是this.show()的简写，this代表的对象是Zi类在堆中new的对象，所以理应调用Zi类中的show</strong>,此时并没有执行该对象的显示初始化，num为0，所以显示第一行结果 zi show 0 。</li>
+<li>Fu(){}弹栈，相当于Zi(){}中super();语句执行完成。<strong>通过super初始化父类内容时，子类的成员变量并未显示初始化，等super()父类初始化完毕后，才进行子类成员变量显示初始化。</strong> num=8;。</li>
+<li>Zi(){}弹栈。</li>
+<li>将堆中Zi类new的对象地址给z，由z控制该对象。</li>
+</ul>
+<h3 id="一个对象实例化过程"><a href="#一个对象实例化过程" class="headerlink" title="一个对象实例化过程:"></a>一个对象实例化过程:</h3><p>以Person p = new Person();为例 </p>
+<ol>
+<li>JVM会读取指定路径下的Person.class文件，并加载进内存，并会先加载Person的父类（如果有直接父类）。</li>
+<li>在堆内存中开辟空间，分配地址。</li>
+<li>并在对象空间中，对对象中的属性进行默认初始化。</li>
+<li>调用对应的构造函数进行初始化。</li>
+<li>在构造函数中，第一行会先调用父类中的构造函数进行初始化。</li>
+<li>父类初始化完毕后，再对子类属性进行显示初始化。</li>
+<li>再进行子类构造函数特定的初始化。</li>
+<li>初始化完毕后，将地址赋给引用变量。</li>
+</ol>
+<h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><ul>
+<li>可以修饰类，方法，变量。</li>
+<li>final修饰的类不可以被继承。</li>
+<li>final修饰的方法不可以被覆盖。</li>
+<li>final修饰的变量是一个常量。只能被赋值一次。比如求圆面积时候用的π。<ul>
+<li>当代码中出现固定不变值，其名字必须全部大写，多个单词，中间用_连接。<ul>
+<li>final固定的是显示初始化的值而不是默认初始化的值。</li>
+<li>为什么要用final修饰变量。其实在程序中如果一个数据是固定的，那么直接使用这个数据就可以了，但是这样阅读性差，所以给该数据起个名字，而且变量值不能变化，所以加final固定。<blockquote>
+<p>final int X=9;//x最后一次被赋值，被固定住。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>内部类只能访问被final修饰的局部变量。  </li>
+</ul>
+<hr>
+<p>继承存在的弊端：打破封装性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Fu</span><br><span class="line">&#123;</span><br><span class="line">    void method()</span><br><span class="line">    &#123;</span><br><span class="line">        //调用了底层系统的资源。</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Zi extends Fu</span><br><span class="line">&#123;</span><br><span class="line">    void method()</span><br><span class="line">    &#123;</span><br><span class="line">        system.out.println(&quot;haha&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class FinalDemo</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在此代码中，子类通过覆盖打破了父类的method方法的封装性。</p>
+<hr>
+<p>我们通过final关键字解决该类问题。</p>
+<ul>
+<li>将原来的父类用final修饰，final修饰的类不能被继承。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final class Fu</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果子类需要覆盖父类中的某些方法，只需要将方法用final修饰即可。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Fu</span><br><span class="line">&#123;</span><br><span class="line">    final void method()</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>全局常量举例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static final double MY_PI=3.14；</span><br></pre></td></tr></table></figure></p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/11/29/day07 面向对象第二部分（视频09）/">JavaSE基础 day07</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Mask 的个人博客">Mask</a></p>
+        <p><span>发布时间:</span>2017年11月29日 - 20时54分</p>
+        <p><span>最后更新:</span>2017年11月29日 - 20时54分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/11/29/day07 面向对象第二部分（视频09）/" title="JavaSE基础 day07">https://MaskTaoX.github.io/2017/11/29/day07 面向对象第二部分（视频09）/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2017/11/29/day07 面向对象第二部分（视频09）/　　作者: Mask" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/27/day06   数组工具类与单例设计模式 /" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaSE基础 day06</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#继承-父子类中的构造函数，子类的实例化过程"><span class="toc-number">1.</span> <span class="toc-text">继承-父子类中的构造函数，子类的实例化过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#子父类中构造函数的特点。"><span class="toc-number">1.1.</span> <span class="toc-text">子父类中构造函数的特点。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zi-run"><span class="toc-number">2.</span> <span class="toc-text">zi run  </span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么子类实例化要访问父类构造函数？"><span class="toc-number">2.1.</span> <span class="toc-text">为什么子类实例化要访问父类构造函数？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#子类实例化的内存图解"><span class="toc-number">2.2.</span> <span class="toc-text">子类实例化的内存图解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一个对象实例化过程"><span class="toc-number">2.3.</span> <span class="toc-text">一个对象实例化过程:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final关键字"><span class="toc-number">3.</span> <span class="toc-text">final关键字</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'MaskTaoX',
+      repo: 'MaskTaoX.github.io',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/11/27/day06   数组工具类与单例设计模式 /" title="下一篇: JavaSE基础 day06">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/29/day07 面向对象第二部分（视频09）/">JavaSE基础 day07</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/27/day06   数组工具类与单例设计模式 /">JavaSE基础 day06</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/day05  8继承/">JavaSE基础 day05</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/22/day04  6.1面向对象/">JavaSE基础 day04</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/day02  4.2函数4.3数组/">JavaSE基础 day02</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/10/day01  基础环境配置/">JavaSE基础 day01</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 Mask
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
