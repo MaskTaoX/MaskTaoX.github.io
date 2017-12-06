@@ -222,11 +222,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-day08 继承第二部分+接口" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-day09 多态 " class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/30/day08 继承第二部分+接口/" class="article-date">
-      <time datetime="2017-11-30T14:07:09.000Z" itemprop="datePublished">2017-11-30</time>
+      <a href="/2017/12/06/day09 多态 /" class="article-date">
+      <time datetime="2017-12-06T13:57:09.000Z" itemprop="datePublished">2017-12-06</time>
 </a>
     </div>
   
@@ -239,7 +239,77 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/30/day08 继承第二部分+接口/">JavaSE基础 day08</a>
+      <a class="article-title" href="/2017/12/06/day09 多态 /">JavaSE基础 day09</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>定义：某一类事物的多种存在形态。简单说就是一个对象对应着不同类型。<br>多态在代码中的体现：父类或者接口的引用指向其子类的对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象的多态性</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> 猫 <span class="keyword">extends</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> 狗 <span class="keyword">extends</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function">pblic <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(string[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        猫 x = <span class="keyword">new</span> 猫();</span><br><span class="line">        动物 x = <span class="keyword">new</span> 猫();<span class="comment">//父类型指向子类对象，这是多态。一个对象，两种形态</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//猫这类事物即具备猫的形态，又具备动物的形态。这就是对象的多态性。</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2017/12/06/day09 多态 /#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-day08 继承第二部分+接口" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/04/day08 继承第二部分+接口/" class="article-date">
+      <time datetime="2017-12-04T14:07:09.000Z" itemprop="datePublished">2017-12-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/04/day08 继承第二部分+接口/">JavaSE基础 day08</a>
     </h1>
   
 
@@ -273,7 +343,7 @@
 
       
         <p class="article-more-link">
-          <a  href="/2017/11/30/day08 继承第二部分+接口/#more">阅读全文 >></a>
+          <a  href="/2017/12/04/day08 继承第二部分+接口/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
