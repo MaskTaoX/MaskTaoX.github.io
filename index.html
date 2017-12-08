@@ -326,7 +326,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>定义：某一类事物的多种存在形态。简单说就是一个对象对应着不同类型。<br>多态在代码中的体现：父类或者接口的引用指向其子类的对象。</p>
+              <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>定义：某一类事物的多种存在形态。简单说就是一个对象对应着不同类型。<br>多态在代码中的体现：父类或者接口的引用指向其子类的对象。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象的多态性</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> 猫 <span class="keyword">extends</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> 狗 <span class="keyword">extends</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function">pblic <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(string[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        猫 x = <span class="keyword">new</span> 猫();</span><br><span class="line">        动物 x = <span class="keyword">new</span> 猫();<span class="comment">//父类型指向子类对象，这是多态。一个对象，两种形态</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//猫这类事物即具备猫的形态，又具备动物的形态。这就是对象的多态性。</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>
@@ -396,7 +396,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>抽象：笼统，模糊，不具体。<br>功能细节无法具体的方法，可以定义成抽象方法。类同理。</p>
+              <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>抽象：笼统，模糊，不具体。<br>功能细节无法具体的方法，可以定义成抽象方法。类同理。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DemoA</span> <span class="keyword">extends</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        system.out.println(<span class="string">"demoa show"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DemoB</span> <span class="keyword">extends</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        system.out.println(<span class="string">"demob show"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>
@@ -466,7 +466,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="继承-父子类中的构造函数，子类的实例化过程"><a href="#继承-父子类中的构造函数，子类的实例化过程" class="headerlink" title="继承-父子类中的构造函数，子类的实例化过程"></a>继承-父子类中的构造函数，子类的实例化过程</h2><h3 id="子父类中构造函数的特点。"><a href="#子父类中构造函数的特点。" class="headerlink" title="子父类中构造函数的特点。"></a>子父类中构造函数的特点。</h3><p>在子类构造对象时，发现，访问子类构造函数时，父类业运行了。<br><strong>原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。</strong></p>
+              <h1 id="继承-父子类中的构造函数，子类的实例化过程"><a href="#继承-父子类中的构造函数，子类的实例化过程" class="headerlink" title="继承-父子类中的构造函数，子类的实例化过程"></a>继承-父子类中的构造函数，子类的实例化过程</h1><h2 id="子父类中构造函数的特点。"><a href="#子父类中构造函数的特点。" class="headerlink" title="子父类中构造函数的特点。"></a>子父类中构造函数的特点。</h2><p>在子类构造对象时，发现，访问子类构造函数时，父类业运行了。<br><strong>原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。</strong></p>
 <blockquote>
 <p>构造函数不存在覆盖。</p>
 </blockquote>
@@ -538,7 +538,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="数组工具对象建立"><a href="#数组工具对象建立" class="headerlink" title="数组工具对象建立"></a>数组工具对象建立</h2><p>工具类，类中全是静态方法  </p>
+              <h1 id="数组工具对象建立"><a href="#数组工具对象建立" class="headerlink" title="数组工具对象建立"></a>数组工具对象建立</h1><p>工具类，类中全是静态方法  </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArrayTool</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ArrayTool</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectSort</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getMax</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>该类中方法都是静态，该类是不需要创建对象的，为了保证不让其被创建对象。可以将构造函数私有化。</strong>  </p>
 <ul>
@@ -609,7 +609,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="继承概述"><a href="#继承概述" class="headerlink" title="继承概述"></a>继承概述</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> <span class="keyword">extends</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+              <h1 id="继承概述"><a href="#继承概述" class="headerlink" title="继承概述"></a>继承概述</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> <span class="keyword">extends</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>子类继承父类<br>继承的好处：</p>
 <ul>
 <li>提高了代码的复用性。</li>
@@ -684,14 +684,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><ul>
+              <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><ul>
 <li>面型过程，强调的是动作 c语言</li>
 <li>面向对象，强调的是实体 c# java c++<br><strong>面向对象的特点</strong></li>
 <li>面向对象是一种常见的思想，符合人们的思考习惯。</li>
 <li>面向对象的出现，将复杂问题简单化。</li>
 <li>让曾经在过程中的执行者变成了对象中的指挥者。<br><strong>举例：面试官为了提高效率，需要更多具备专业能力的人帮助您做事，这就是您所需要的对象，调用对象的开发功能完成项目。</strong></li>
 </ul>
-<h2 id="类与对象的关系"><a href="#类与对象的关系" class="headerlink" title="类与对象的关系"></a>类与对象的关系</h2><ul>
+<h1 id="类与对象的关系"><a href="#类与对象的关系" class="headerlink" title="类与对象的关系"></a>类与对象的关系</h1><ul>
 <li>用JAVA语言对现实生活中的实物进行描述，通过类的形式实现。</li>
 <li>只关注两个方面，属性（成员变量），行为（成员函数）。</li>
 <li>明确事物的属性行为后定义到类中即可。</li>
@@ -765,7 +765,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="函数-格式"><a href="#函数-格式" class="headerlink" title="函数-格式"></a>函数-格式</h2><p>定义函数的格式<br>修饰符 返回值类型 函数名（参数类型 形参1.参数类型 形参2….）<br>{  </p>
+              <h1 id="函数-格式"><a href="#函数-格式" class="headerlink" title="函数-格式"></a>函数-格式</h1><p>定义函数的格式<br>修饰符 返回值类型 函数名（参数类型 形参1.参数类型 形参2….）<br>{  </p>
 <pre><code>执行语句;
 return 返回值;
 </code></pre><p>}<br>函数名称要具有可读性<br>第一个单词小写剩下的全部大写</p>
@@ -837,7 +837,7 @@ return 返回值;
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="人机交互"><a href="#人机交互" class="headerlink" title="人机交互"></a>人机交互</h2><p>三种技术架构</p>
+              <h1 id="人机交互"><a href="#人机交互" class="headerlink" title="人机交互"></a>人机交互</h1><p>三种技术架构</p>
 <ul>
 <li>JavaEE 企业</li>
 <li>JavaSE 标准</li>
