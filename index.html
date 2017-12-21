@@ -67,7 +67,7 @@
         </hgroup>
 
         
-        <p class="header-subtitle">博客目前存在很多问题，我会随着以后的学习不断优化改进</p>
+        <p class="header-subtitle">做点好事，写进日记</p>
         
         
         
@@ -190,7 +190,7 @@
               <h1 class="header-author"><a href="/" title="Me">Mask</a></h1>
             </hgroup>
             
-            <p class="header-subtitle">博客目前存在很多问题，我会随着以后的学习不断优化改进</p>
+            <p class="header-subtitle">做点好事，写进日记</p>
             
             <nav class="header-menu">
                 <ul>
@@ -221,6 +221,136 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-day12 异常 " class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/21/day12 异常 /" class="article-date">
+      <time datetime="2017-12-21T13:50:58.599Z" itemprop="datePublished">2017-12-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>异常：在运行时发生的不正常情况。<br>在java中用类的形式对不正常的情况进行描述和封装对象。描述不正常的情况的类，就成为异常类。<br>以前正常流程代码和问题处理代码相结合，现在将正常流程代码和问题处理代码分离，提高阅读性。<br>其实异常类就是java通过面向对象的思想将问题封装成了对象。用异常类对其进行描述。<br>不同的问题用不同的类进行具体的描述。比如角标越界，空指针等。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ExceptionDemo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        sleep(-<span class="number">5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">(<span class="keyword">int</span> time)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(time&lt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">new</span> FuTime();<span class="comment">//就代码时间为负的情况，这个对象中会包含着问题的名称，信息，位置等信息。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(time&gt;<span class="number">1000</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">new</span> BigTime();</span><br><span class="line">        &#125;</span><br><span class="line">        system.out.println(<span class="string">"睡眠时间"</span>+time);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FuTime</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BigTime</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="体系"><a href="#体系" class="headerlink" title="体系"></a>体系</h2><p>问题很多，意味着描述的类也很多，将其共性进行向上抽取，形成了异常体系。<br>最终问题就分成了两大类。<br><strong>Throwable：无论是error还是异常都是问题，问题发生就应该可以抛出，让调用者知道并处理，该体系的特点就是在于Throwable及其所有的子类都具有可抛性。</strong></p>
+<ul>
+<li>一般不可处理。Error<ul>
+<li>特点：是由jvm抛出的严重性问题，直接修改程序。</li>
+</ul>
+</li>
+<li>可以处理的。Exception</li>
+</ul>
+<p>可抛性到底是什么？怎么体现可抛性？<br>throws throws被这两个关键字所操作的类和对象都具有可抛性。<br>该体系的特点：子类的后缀名都是其父类名作为后缀，阅读性很强。</p>
+<h2 id="原理和异常对象的抛出throw"><a href="#原理和异常对象的抛出throw" class="headerlink" title="原理和异常对象的抛出throw"></a>原理和异常对象的抛出throw</h2><ul>
+<li>遇到识别的问题进行对象的封装。</li>
+<li>抛给调用者。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Deno</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(arr[index]);<span class="comment">//throw new ArrayIndexOutOfBoundsException(index)</span></span><br><span class="line">        System.out.println(<span class="string">"hhhh"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ExceptionDemo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(string[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        Demo d=<span class="keyword">new</span> Demo();</span><br><span class="line">        d.method(arr,<span class="number">3</span>);</span><br><span class="line">        System.out.println(<span class="string">"main"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行时不会输出System中的字符串，异常出现的位置程序不在运行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Demo</span><br><span class="line">&#123;</span><br><span class="line">    public int merhod(int[] arr,int index)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arr==null)</span><br><span class="line">        &#123;</span><br><span class="line">            throw new NullPointerException(&quot;数组引用不能为空&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        if(index&gt;=arr.length)</span><br><span class="line">        &#123;</span><br><span class="line">            throw new ArrayIndexOutOfBoundsException(&quot;数组角标越界：&quot;+index);//对出现的问题进行描述。</span><br><span class="line">        &#125;</span><br><span class="line">        return arr[index];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-day11 Object类" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/15/day11 Object类/" class="article-date">
+      <time datetime="2017-12-15T12:34:49.000Z" itemprop="datePublished">2017-12-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/15/day11 Object类/">JavaSE基础 day11</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h1><p>object:所有类的根类。<br>Object是不断抽取而来的，具备着所有对象都具备的共性内容。</p>
+<ul>
+<li>
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2017/12/15/day11 Object类/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-day10 内部类 " class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -281,75 +411,6 @@
       
         <p class="article-more-link">
           <a  href="/2017/12/08/day10 内部类 /#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-day11 Object类" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/08/day11 Object类/" class="article-date">
-      <time datetime="2017-12-08T09:55:49.000Z" itemprop="datePublished">2017-12-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/08/day11 Object类/">JavaSE基础 day10</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h1><p>object:所有类的根类。<br>Object是不断抽取而来的，具备着所有对象都具备的共性内容。</p>
-<ul>
-<li>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/12/08/day11 Object类/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -879,80 +940,10 @@ return 返回值;
 
 
   
-    <article id="post-day01 基础环境配置" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2017/11/10/day01 基础环境配置/" class="article-date">
-      <time datetime="2017-11-10T12:54:06.000Z" itemprop="datePublished">2017-11-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/day01 基础环境配置/">JavaSE基础 day01</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="人机交互"><a href="#人机交互" class="headerlink" title="人机交互"></a>人机交互</h1><p>三种技术架构</p>
-<ul>
-<li>JavaEE 企业</li>
-<li>JavaSE 标准</li>
-<li>JavaME 小型</li>
-</ul>
-<ul>
-<li>
-          
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/11/10/day01 基础环境配置/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">

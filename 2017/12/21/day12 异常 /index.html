@@ -3,23 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>JavaSE基础 day05 | Rorschach</title>
+  <title>Rorschach</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="继承概述12class student extends person&amp;#123;&amp;#125; 子类继承父类继承的好处：  提高了代码的复用性。 让类与类之间产生了联系，给第三个特性多态提供了前提。">
-<meta name="keywords" content="学习">
+  <meta name="description" content="异常概述异常：在运行时发生的不正常情况。在java中用类的形式对不正常的情况进行描述和封装对象。描述不正常的情况的类，就成为异常类。以前正常流程代码和问题处理代码相结合，现在将正常流程代码和问题处理代码分离，提高阅读性。其实异常类就是java通过面向对象的思想将问题封装成了对象。用异常类对其进行描述。不同的问题用不同的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaSE基础 day05">
-<meta property="og:url" content="https://MaskTaoX.github.io/2017/11/23/day05 继承/index.html">
+<meta property="og:title" content="Rorschach">
+<meta property="og:url" content="https://MaskTaoX.github.io/2017/12/21/day12 异常 /index.html">
 <meta property="og:site_name" content="Rorschach">
-<meta property="og:description" content="继承概述12class student extends person&amp;#123;&amp;#125; 子类继承父类继承的好处：  提高了代码的复用性。 让类与类之间产生了联系，给第三个特性多态提供了前提。">
-<meta property="og:image" content="https://i.loli.net/2017/11/23/5a16c340f28aa.png">
-<meta property="og:image" content="https://i.loli.net/2017/11/23/5a16c4d7915ef.png">
-<meta property="og:image" content="https://i.loli.net/2017/11/23/5a16cc3ac41a0.png">
-<meta property="og:updated_time" content="2017-12-08T10:03:02.903Z">
+<meta property="og:description" content="异常概述异常：在运行时发生的不正常情况。在java中用类的形式对不正常的情况进行描述和封装对象。描述不正常的情况的类，就成为异常类。以前正常流程代码和问题处理代码相结合，现在将正常流程代码和问题处理代码分离，提高阅读性。其实异常类就是java通过面向对象的思想将问题封装成了对象。用异常类对其进行描述。不同的问题用不同的类进行具体的描述。比如角标越界，空指针等。 123456789101112131">
+<meta property="og:updated_time" content="2017-12-21T13:48:29.104Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaSE基础 day05">
-<meta name="twitter:description" content="继承概述12class student extends person&amp;#123;&amp;#125; 子类继承父类继承的好处：  提高了代码的复用性。 让类与类之间产生了联系，给第三个特性多态提供了前提。">
-<meta name="twitter:image" content="https://i.loli.net/2017/11/23/5a16c340f28aa.png">
+<meta name="twitter:title" content="Rorschach">
+<meta name="twitter:description" content="异常概述异常：在运行时发生的不正常情况。在java中用类的形式对不正常的情况进行描述和封装对象。描述不正常的情况的类，就成为异常类。以前正常流程代码和问题处理代码相结合，现在将正常流程代码和问题处理代码分离，提高阅读性。其实异常类就是java通过面向对象的思想将问题封装成了对象。用异常类对其进行描述。不同的问题用不同的类进行具体的描述。比如角标越界，空指针等。 123456789101112131">
   
     <link rel="alternative" href="/atom.xml" title="Rorschach" type="application/atom+xml">
   
@@ -223,11 +218,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-day05 继承" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-day12 异常 " class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/23/day05 继承/" class="article-date">
-      <time datetime="2017-11-23T13:47:23.000Z" itemprop="datePublished">2017-11-23</time>
+      <a href="/2017/12/21/day12 异常 /" class="article-date">
+      <time datetime="2017-12-21T13:50:58.599Z" itemprop="datePublished">2017-12-21</time>
 </a>
     </div>
   
@@ -236,84 +231,27 @@
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      JavaSE基础 day05
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="继承概述"><a href="#继承概述" class="headerlink" title="继承概述"></a>继承概述</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> <span class="keyword">extends</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>子类继承父类<br>继承的好处：</p>
+        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>异常：在运行时发生的不正常情况。<br>在java中用类的形式对不正常的情况进行描述和封装对象。描述不正常的情况的类，就成为异常类。<br>以前正常流程代码和问题处理代码相结合，现在将正常流程代码和问题处理代码分离，提高阅读性。<br>其实异常类就是java通过面向对象的思想将问题封装成了对象。用异常类对其进行描述。<br>不同的问题用不同的类进行具体的描述。比如角标越界，空指针等。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ExceptionDemo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        sleep(-<span class="number">5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sleep</span><span class="params">(<span class="keyword">int</span> time)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(time&lt;<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">new</span> FuTime();<span class="comment">//就代码时间为负的情况，这个对象中会包含着问题的名称，信息，位置等信息。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(time&gt;<span class="number">1000</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">new</span> BigTime();</span><br><span class="line">        &#125;</span><br><span class="line">        system.out.println(<span class="string">"睡眠时间"</span>+time);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FuTime</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BigTime</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="体系"><a href="#体系" class="headerlink" title="体系"></a>体系</h2><p>问题很多，意味着描述的类也很多，将其共性进行向上抽取，形成了异常体系。<br>最终问题就分成了两大类。<br><strong>Throwable：无论是error还是异常都是问题，问题发生就应该可以抛出，让调用者知道并处理，该体系的特点就是在于Throwable及其所有的子类都具有可抛性。</strong></p>
 <ul>
-<li>提高了代码的复用性。</li>
-<li>让类与类之间产生了联系，给第三个特性多态提供了前提。  </li>
+<li>一般不可处理。Error<ul>
+<li>特点：是由jvm抛出的严重性问题，直接修改程序。</li>
 </ul>
-<hr>
-<ul>
-<li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文="">
-
-</the></li>
+</li>
+<li>可以处理的。Exception</li>
 </ul>
-<p>java中支持单继承，不直接支持多继承，对c+中多继承机制进行改良。</p>
-<ul>
-<li>单继承：一个子类只能有一个直接父类。</li>
-<li>多继承：一个子类可以有多个直接父类（java不允许，进行改良）。不直接支持是因是多个为父类中有相同成员，会产生调用的不确定性。</li>
-<li>在Java中时通过“多实现”的方式实现。</li>
+<p>可抛性到底是什么？怎么体现可抛性？<br>throws throws被这两个关键字所操作的类和对象都具有可抛性。<br>该体系的特点：子类的后缀名都是其父类名作为后缀，阅读性很强。</p>
+<h2 id="原理和异常对象的抛出throw"><a href="#原理和异常对象的抛出throw" class="headerlink" title="原理和异常对象的抛出throw"></a>原理和异常对象的抛出throw</h2><ul>
+<li>遇到识别的问题进行对象的封装。</li>
+<li>抛给调用者。</li>
 </ul>
-<hr>
-<p>java支持多层继承。c继承b，b继承a，这样就会出现继承体系。<br><strong>当要使用一个继承体系时</strong></p>
-<ul>
-<li>查看该体系中的顶层类，了解该体系的基本功能。</li>
-<li>创建体系中的最子类对象，完成功能的使用。</li>
-</ul>
-<hr>
-<p><strong>什么时候定义继承？</strong>  </p>
-<p>类与类之间存在着继承关系，xxx是yyy中的一种，xxx extends yyy。</p>
-<hr>
-<ul>
-<li>当本类中成员和局部变量同名用this区分。</li>
-<li>当子父类中的成员变量同名用super区分父类。<br>this 和 super 很相似。super代表父类。<br><em>this代表本类对象的引用，super代表父类空间。</em><br><strong>子类不能直接访问父类中私有的内容</strong><br><img src="https://i.loli.net/2017/11/23/5a16c340f28aa.png" alt="内存图解.png"><br>左上是栈，右上是堆，下是方法区<br><img src="https://i.loli.net/2017/11/23/5a16c4d7915ef.png" alt="子类父类方法重名.png"></li>
-</ul>
-<blockquote>
-<p>如果子类父类方法重名，调用子类时，自然会用子类的方法，并不会再去调用父类重名的方法。这叫做<strong>覆盖操作</strong>，这是函数在子父类中特性。</p>
-</blockquote>
-<hr>
-<p>函数的两个特性：</p>
-<ol>
-<li>重载，同一个类中。</li>
-<li>覆盖。子类中，又叫重写。  </li>
-</ol>
-<p>覆盖注意事项：</p>
-<ul>
-<li>子类覆盖父类，子类权限必须大于等于父类的权限。</li>
-<li>静态只能覆盖静态，或者被静态覆盖。</li>
-</ul>
-<hr>
-<p><strong>覆盖的应用</strong><br>什么时候使用？<br>当对一个类进行子类的扩展时，子类需要保留父类的功能声明，但是要定义子类中该功能的特有内容时，就会使用覆盖操作。<br><img src="https://i.loli.net/2017/11/23/5a16cc3ac41a0.png" alt="子类覆盖父类功能，并保留原有功能.png"><strong><font color="red">super.show();</font></strong><font color="black"></font></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Deno</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(arr[index]);<span class="comment">//throw new ArrayIndexOutOfBoundsException(index)</span></span><br><span class="line">        System.out.println(<span class="string">"hhhh"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ExceptionDemo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(string[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        Demo d=<span class="keyword">new</span> Demo();</span><br><span class="line">        d.method(arr,<span class="number">3</span>);</span><br><span class="line">        System.out.println(<span class="string">"main"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行时不会输出System中的字符串，异常出现的位置程序不在运行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Demo</span><br><span class="line">&#123;</span><br><span class="line">    public int merhod(int[] arr,int index)</span><br><span class="line">    &#123;</span><br><span class="line">        if(arr==null)</span><br><span class="line">        &#123;</span><br><span class="line">            throw new NullPointerException(&quot;数组引用不能为空&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">        if(index&gt;=arr.length)</span><br><span class="line">        &#123;</span><br><span class="line">            throw new ArrayIndexOutOfBoundsException(&quot;数组角标越界：&quot;+index);//对出现的问题进行描述。</span><br><span class="line">        &#125;</span><br><span class="line">        return arr[index];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
       
@@ -369,13 +307,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/11/23/day05 继承/">JavaSE基础 day05</a></p>
+        <p><span>本文标题:</span><a href="/2017/12/21/day12 异常 /"></a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Mask 的个人博客">Mask</a></p>
-        <p><span>发布时间:</span>2017年11月23日 - 21时47分</p>
-        <p><span>最后更新:</span>2017年12月08日 - 18时03分</p>
+        <p><span>发布时间:</span>2017年12月21日 - 21时50分</p>
+        <p><span>最后更新:</span>2017年12月21日 - 21时48分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/11/23/day05 继承/" title="JavaSE基础 day05">https://MaskTaoX.github.io/2017/11/23/day05 继承/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2017/11/23/day05 继承/　　作者: Mask" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/21/day12 异常 /" title="">https://MaskTaoX.github.io/2017/12/21/day12 异常 /</a>
+            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2017/12/21/day12 异常 /　　作者: Mask" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -388,18 +326,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/11/27/day06 数组工具类与单例设计模式 /" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          JavaSE基础 day06
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/22/day04 面向对象/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaSE基础 day04</div>
+    <a href="/2017/12/15/day11 Object类/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaSE基础 day11</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -410,7 +339,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#继承概述"><span class="toc-number">1.</span> <span class="toc-text">继承概述</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#异常"><span class="toc-number">1.</span> <span class="toc-text">异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#体系"><span class="toc-number">1.2.</span> <span class="toc-text">体系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原理和异常对象的抛出throw"><span class="toc-number">1.3.</span> <span class="toc-text">原理和异常对象的抛出throw</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -476,13 +405,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/11/27/day06 数组工具类与单例设计模式 /" title="上一篇: JavaSE基础 day06">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/11/22/day04 面向对象/" title="下一篇: JavaSE基础 day04">
+            <a href="/2017/12/15/day11 Object类/" title="下一篇: JavaSE基础 day11">
                 <i class="fa fa-angle-right"></i>
             </a>
         
