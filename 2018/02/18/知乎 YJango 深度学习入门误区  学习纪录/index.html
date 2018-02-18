@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Yjango 深度学习入门误区 学习记录 | Rorschach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原文链接：https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html  深度学习的需要 学习就是建立预测模型的过程。   深度学习的所有输入输出都可以用矩阵来表示。(线性代数)   概率来提供决策的依据。  深度：为何高效多层神经网络。 学习：寻找关联f的过程 ">
+<meta name="keywords" content="入门">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yjango 深度学习入门误区 学习记录">
+<meta property="og:url" content="https://MaskTaoX.github.io/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/index.html">
+<meta property="og:site_name" content="Rorschach">
+<meta property="og:description" content="原文链接：https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html  深度学习的需要 学习就是建立预测模型的过程。   深度学习的所有输入输出都可以用矩阵来表示。(线性代数)   概率来提供决策的依据。  深度：为何高效多层神经网络。 学习：寻找关联f的过程 x:问题描述。   f:解题的方法。   y:对应的答案。 难点:需要在未见过">
+<meta property="og:image" content="https://i.loli.net/2018/02/18/5a894f66ae010.png">
+<meta property="og:image" content="https://i.loli.net/2018/02/18/5a8954e739e23.png">
+<meta property="og:image" content="https://i.loli.net/2018/02/18/5a89561f3f57a.png">
+<meta property="og:updated_time" content="2018-02-18T13:40:32.373Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Yjango 深度学习入门误区 学习记录">
+<meta name="twitter:description" content="原文链接：https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html  深度学习的需要 学习就是建立预测模型的过程。   深度学习的所有输入输出都可以用矩阵来表示。(线性代数)   概率来提供决策的依据。  深度：为何高效多层神经网络。 学习：寻找关联f的过程 x:问题描述。   f:解题的方法。   y:对应的答案。 难点:需要在未见过">
+<meta name="twitter:image" content="https://i.loli.net/2018/02/18/5a894f66ae010.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Rorschach" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Mask</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">做点好事，写进日记</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="#" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/MaskTaoX" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coolben.xyz/">Coolben</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://geoch.top/">Geo</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">啥也不会学开发</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Mask</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Mask</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">做点好事，写进日记</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="#" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/MaskTaoX" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-知乎 YJango 深度学习入门误区  学习纪录" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/" class="article-date">
+      <time datetime="2018-02-18T13:36:49.000Z" itemprop="datePublished">2018-02-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Yjango 深度学习入门误区 学习记录
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Deeplearning/">Deeplearning</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门/">入门</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong> 原文链接：<a href="https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html" target="_blank" rel="noopener">https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html</a> </strong></p>
+<h1 id="深度学习的需要"><a href="#深度学习的需要" class="headerlink" title="深度学习的需要"></a>深度学习的需要</h1><ul>
+<li>学习就是建立预测模型的过程。  </li>
+<li>深度学习的所有输入输出都可以用矩阵来表示。(线性代数)  </li>
+<li>概率来提供决策的依据。</li>
+</ul>
+<h1 id="深度：为何高效"><a href="#深度：为何高效" class="headerlink" title="深度：为何高效"></a>深度：为何高效</h1><p>多层神经网络。</p>
+<h2 id="学习：寻找关联f的过程"><a href="#学习：寻找关联f的过程" class="headerlink" title="学习：寻找关联f的过程"></a>学习：寻找关联f的过程</h2><ul>
+<li>x:问题描述。  </li>
+<li>f:解题的方法。  </li>
+<li>y:对应的答案。</li>
+<li>难点:需要在未见过的任务上表现良好。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">x--&gt;f</span><br><span class="line">f--&gt;y</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+</the></li>
+</ul>
+<h2 id="关于f的寻找"><a href="#关于f的寻找" class="headerlink" title="关于f的寻找"></a>关于f的寻找</h2><p>能够拟合训练集的关联f并非唯一。</p>
+<blockquote>
+<p>比如我想两个数字相加为1，我可以通过权重让一个数字为1，另一个为0，也可以一个是-299，另一个取300.</p>
+</blockquote>
+<h2 id="维度诅咒"><a href="#维度诅咒" class="headerlink" title="维度诅咒"></a>维度诅咒</h2><p>维度越大，我们越无法获取所得的情况。<br>面临没有见过的情况，一般是左右的情况平均一下。但是这种方法在高纬度数据下并不适用。</p>
+<h2 id="Distributed-Representation"><a href="#Distributed-Representation" class="headerlink" title="Distributed Representation"></a>Distributed Representation</h2><p>这就引入了第一个自然界的先验知识：<strong>并行组合</strong>。也就是深度学习中分布式表达distributed representation的思想。<br><img src="https://i.loli.net/2018/02/18/5a894f66ae010.png" alt="TIM截图20180218180202.png"></p>
+<ul>
+<li>原本需要8个不同的情况，现在只需要6个，这8个变体又是3种因素组合而成的。  </li>
+<li>图中椭圆这个factor实际上也是有变体，可以以相同的思路继续拆分，继续降低训练所需要的数据量。</li>
+</ul>
+<h2 id="No-Free-Lunch-Theorem（无免费午餐）"><a href="#No-Free-Lunch-Theorem（无免费午餐）" class="headerlink" title="No Free Lunch Theorem（无免费午餐）"></a>No Free Lunch Theorem（无免费午餐）</h2><p>既然关联f是无限的，那么寻找关联f好比是大海捞针。不同的机器学习算法只是更擅长在某个海域打捞而已。如果重点打捞某个区域，那么其他的区域就会被忽略。所以如果想要打捞的关联f可以存在于大海的任何地方，那么深度学习并不会比其他的机器学习算法更优秀。这种情况下，任何两个机器学习算法都是等价的。<br><strong>但是事实上并非如此，因为自然界中的很多任务，其关联f并非像我之前可以出现在大海当中的任何位置，而是会集中在特定海域，那些符合自然物理现象的特定海域。而深度学习就是擅长打捞该海域的机器学习算法。</strong></p>
+<h2 id="深层vs浅层"><a href="#深层vs浅层" class="headerlink" title="深层vs浅层"></a>深层vs浅层</h2><p>第二条先验知识：那就是<strong>迭代变换</strong>。</p>
+<blockquote>
+<p>我们知道原子会形成分子，而事物是在原子所形成的分子的基础上，进一步迭代形成的，并非再从原子开始重新生成。飞机是由原子到分子再到各式各样的零件组合形成的。坦克同样也利用到了相同的分子层。虽然作为图片，坦克和飞机是不同的样本，但是他们都共享着相同的分子层。这意味着当你用深层神经网络时，训练飞机样本会间接的对坦克进行了训练，降低了训练所需要的数据量。   </p>
+</blockquote>
+<p><img src="https://i.loli.net/2018/02/18/5a8954e739e23.png" alt="浅层.png"><br>分布式表达（distributed Representation）将变体拆分成因素。但是如果无限节点的浅层网络，所拆分的变体并不会在不同的样本之间形成共享。</p>
+<p><img src="https://i.loli.net/2018/02/18/5a89561f3f57a.png" alt="深层.png"><br>深层神经网络，由于拆分的变体可以在不同样本间共享，在浅层网络中只负责学习自己的关联，而在深层网络中，那些共用的相同因素的样本也会被间接训练到。<strong>深层的优势在于节省了训练所需要的数据量。</strong>  </p>
+<ul>
+<li>目前描述的网络叫做<strong>深层前馈神经网络</strong>，feedforward neural network。变换只会一层接着一层进行，不同层之间不会有跳跃，并且组合也是在同一层内的因素间进行的。</li>
+<li>想象如果一个网络中的某个节点可以和其他的任何节点连接，那么这样的网络就没有任何的侧重。好比在你找人时被告知，他无处不在和他在哪都不在。这就相当于没有加入先验知识，没有缩小寻找关联f的海域。</li>
+<li><p>所以前馈神经网络的这种连接方式，很好的缩小了训练所用的数据量。因为这种组合方式比较符合自然界的物理形成规律。</p>
+<blockquote>
+<p>feedforward neural network 有两个先验知识，并行和迭代。有了这两个先验知识，缩小了f的范围，也就是缩小了假设空间。<br>假设空间（hypothesis space），指我们在那个范围内寻找关联f。</p>
+</blockquote>
+</li>
+<li><p>并行：新状态是由若干旧状态并行组合形成。</p>
+</li>
+<li>迭代：新状态可由已形成的状态再次迭代形成。</li>
+<li><p>前馈神经网络可以适用于几乎所有的任务，但它非常一般性，所提供的先验知识的针对性很低。</p>
+</li>
+<li><p>先验知识不够针对，那么训练所需要的数据量就会变大，并且过深之后会将那些噪音的形成规则也学习到模型当中，而这些规律并不是我们想要的。</p>
+</li>
+<li><p>而神经网络的其他变体，比如循环神经网络，卷积神经网络就提供了更多十分具有针对性的先验知识，可以缩小搜索的海域面积，排除掉那些噪音规律所带来的额外干扰。</p>
+</li>
+<li><p>不同的神经网络变体，就在于你向其中加入了不同的先验知识。</p>
+</li>
+</ul>
+<h1 id="应用：设计理念"><a href="#应用：设计理念" class="headerlink" title="应用：设计理念"></a>应用：设计理念</h1><p>深层神经网络的优势就在于<strong>因素拆分，因素共享</strong>，设计神经网络基于这两点，前馈神经网络就是基于这两点的基本形式，但是神经网络并不仅限于这种形式。设计神经网络更像是玩乐高积木，但是玩的规则在于如何拆分因素，如何使不同的样本之间形成因素共享。所以在看到很多新的网络结构时，请务必考虑，他们的结构是如何考虑因素拆分和因素共享的。</p>
+<h2 id="时间共享-循环神经网络RNN"><a href="#时间共享-循环神经网络RNN" class="headerlink" title="时间共享 循环神经网络RNN"></a>时间共享 循环神经网络RNN</h2><blockquote>
+<p>以陶瓷的塑形为例，用循环层做时序预测，相当于使用转盘，摆出一个手型后，每个角度都是以这种手型去捏制的。</p>
+</blockquote>
+<h2 id="空间共享-卷积神经网络CNN"><a href="#空间共享-卷积神经网络CNN" class="headerlink" title="空间共享 卷积神经网络CNN"></a>空间共享 卷积神经网络CNN</h2><h2 id="作者提出的四个设计原则"><a href="#作者提出的四个设计原则" class="headerlink" title="作者提出的四个设计原则"></a>作者提出的四个设计原则</h2><p>设计神经网络实质上就是在对<strong>假设空间进行调整</strong>。也就是选择在哪些片海域寻找你的关联f。</p>
+<ul>
+<li><p>增加共享，降低确定关联f所需要的数据量。如果你知道它大致在大海的哪个范围后，就可以使用更少的渔网，更快的打捞上来。</p>
+</li>
+<li><p>增加惩罚，我们可能会事先知道关联f不满足哪些特点。那么一旦这种特点的关联f在训练中被找到时，我们就对结果进行惩罚，起到筛选作用。用打鱼做比喻的话，那些不符合条件的小鱼会被大孔渔网筛选掉。</p>
+</li>
+<li><p>优化起点，我们优先从哪片海域先开始寻找，找不到再找其它的海域。</p>
+</li>
+<li><p>降低变体数，变体数量越多，我们就需要见到越多的数据。所以我们可以预处理数据，将变体数量在学习之前就降低下去。比如将数据减去平均值，除以均差。</p>
+</li>
+</ul>
+<h2 id="应用以上原则的技术，从先验知识的角度"><a href="#应用以上原则的技术，从先验知识的角度" class="headerlink" title="应用以上原则的技术，从先验知识的角度"></a>应用以上原则的技术，从先验知识的角度</h2><h3 id="迁移学习"><a href="#迁移学习" class="headerlink" title="迁移学习"></a>迁移学习</h3><p>利用因素共享这一特点，将一个任务中学到的关联应用于其他的任务中去。</p>
+<blockquote>
+<p>将已经训练好的，用于识别动物的神经网络的前几层这个f1拿出来，在识别植物的神经网络中，额外加两层再做轻微训练，同样适用，毕竟大家都是人眼，这部分的f1很大程度上是共享的。<br>这就是迁移学习。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">反光--f1--&gt;视网膜成像</span><br><span class="line">视网膜成像--f2--&gt;脑中概念</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="多任务学习"><a href="#多任务学习" class="headerlink" title="多任务学习"></a>多任务学习</h3><p>多任务学习其实和迁移学习使用的是相同的先验知识。多任务学习，是在训练的时候用共享着相同底层知识的其他任务的数据来帮助一起训练。可以起到扩充训练数据量的作用。同时寻找到的关联f更加优秀。因为三个不同的任务对底层的知识同时进行了约束。只有同时满足三个不同任务的关联f才会被采用，这就排除掉那些只符合单个任务的关联f。</p>
+<h3 id="跨层组合"><a href="#跨层组合" class="headerlink" title="跨层组合"></a>跨层组合</h3><p>这是另一条先验知识，我们知道前馈神经网络是不允许跨层组合的。<strong>残差网络</strong>就是拥有这种特点的神经网络。</p>
+<blockquote>
+<p>比如说我们在判断一个人的时候，很多时候我们并不是观察它的全部，或者给你的图片本身就是残缺的。这时我们会靠单个五官，外加这个人的着装，再加他的身形来综合判断这个人。这样，即便图片本身是残缺的也可以很好的判断它是什么。这和前馈神经网络的先验知识不同，它允许不同层级之间的因素进行组合。</p>
+</blockquote>
+<h3 id="蒸馏模型"><a href="#蒸馏模型" class="headerlink" title="蒸馏模型"></a>蒸馏模型</h3><p>其本质仍然属于迁移学习，但是将知识以不同的方式迁移。一般的迁移学习是将学到的权重直接用在新的模型当中，迁移的是权重。而蒸馏模型所迁移的是标签。</p>
+<blockquote>
+<p>有两个模型，完成的任务是相同的，但是叫做老师的这个模型拥有更好的特征（输入），而叫做学生的这个模型由于实际应用的约束，无法使用这样的特征。<br>蒸馏模型的做法是先训练老师模型，用老师模型的预测值作为一种额外的标签，在训练学生模型的时候和学生模型自己的标签一同使用，帮助学生模型寻找到更好的关联f。而这种帮助过程只发生在训练阶段，实际的使用中，只用学生模型。这就好比一个学生在做题的时候，他既有参考答案，又有一个家教的指导。虽然家教无法代替学生去考试。因为有家教的辅导，这个学生会比没有家教辅导的学生更容易学习。</p>
+</blockquote>
+<h3 id="自动编码器"><a href="#自动编码器" class="headerlink" title="自动编码器"></a>自动编码器</h3><p>自动编码器是利用并行与迭代的这两个先验知识，来操控变体的一种技术。用作生成模型和特征工程。</p>
+<h3 id="Batch-normalization"><a href="#Batch-normalization" class="headerlink" title="Batch normalization"></a>Batch normalization</h3><p>一般我们会在输入和输出进行预处理，减去均值和标准差，降低变体数量。这个思路一样可以在隐藏层实施。因为输入和输出是事物的状态，有变体，隐藏层同样是发展的中间状态，也有变体。</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/">Yjango 深度学习入门误区 学习记录</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Mask 的个人博客">Mask</a></p>
+        <p><span>发布时间:</span>2018年02月18日 - 21时36分</p>
+        <p><span>最后更新:</span>2018年02月18日 - 21时40分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/" title="Yjango 深度学习入门误区 学习记录">https://MaskTaoX.github.io/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://MaskTaoX.github.io/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/　　作者: Mask" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/09/day13 包+几道练习 /" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaSE基础 day13</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#深度学习的需要"><span class="toc-number">1.</span> <span class="toc-text">深度学习的需要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#深度：为何高效"><span class="toc-number">2.</span> <span class="toc-text">深度：为何高效</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#学习：寻找关联f的过程"><span class="toc-number">2.1.</span> <span class="toc-text">学习：寻找关联f的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于f的寻找"><span class="toc-number">2.2.</span> <span class="toc-text">关于f的寻找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#维度诅咒"><span class="toc-number">2.3.</span> <span class="toc-text">维度诅咒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distributed-Representation"><span class="toc-number">2.4.</span> <span class="toc-text">Distributed Representation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#No-Free-Lunch-Theorem（无免费午餐）"><span class="toc-number">2.5.</span> <span class="toc-text">No Free Lunch Theorem（无免费午餐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深层vs浅层"><span class="toc-number">2.6.</span> <span class="toc-text">深层vs浅层</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#应用：设计理念"><span class="toc-number">3.</span> <span class="toc-text">应用：设计理念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#时间共享-循环神经网络RNN"><span class="toc-number">3.1.</span> <span class="toc-text">时间共享 循环神经网络RNN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#空间共享-卷积神经网络CNN"><span class="toc-number">3.2.</span> <span class="toc-text">空间共享 卷积神经网络CNN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#作者提出的四个设计原则"><span class="toc-number">3.3.</span> <span class="toc-text">作者提出的四个设计原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用以上原则的技术，从先验知识的角度"><span class="toc-number">3.4.</span> <span class="toc-text">应用以上原则的技术，从先验知识的角度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#迁移学习"><span class="toc-number">3.4.1.</span> <span class="toc-text">迁移学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多任务学习"><span class="toc-number">3.4.2.</span> <span class="toc-text">多任务学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跨层组合"><span class="toc-number">3.4.3.</span> <span class="toc-text">跨层组合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#蒸馏模型"><span class="toc-number">3.4.4.</span> <span class="toc-text">蒸馏模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自动编码器"><span class="toc-number">3.4.5.</span> <span class="toc-text">自动编码器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Batch-normalization"><span class="toc-number">3.4.6.</span> <span class="toc-text">Batch normalization</span></a></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'MaskTaoX',
+      repo: 'MaskTaoX.github.io',
+      oauth: {
+        client_id: '',
+        client_secret: '',
+      },
+    })
+    gitment.render('gitments')
+</script>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/02/09/day13 包+几道练习 /" title="下一篇: JavaSE基础 day13">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/">Yjango 深度学习入门误区 学习记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/09/day13 包+几道练习 /">JavaSE基础 day13</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/21/day12 异常 /">JavaSE基础 day12</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/15/day11 Object类/">JavaSE基础 day11</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/08/day10 内部类 /">JavaSE基础 day10</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/day09 多态 /">JavaSE基础 day09</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/04/day08 继承第二部分+接口/">JavaSE基础 day08</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/29/day07 面向对象第二部分/">JavaSE基础 day07</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/27/day06 数组工具类与单例设计模式 /">JavaSE基础 day06</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/day05 继承/">JavaSE基础 day05</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/22/day04 面向对象/">JavaSE基础 day04</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/day02 函数+数组/">JavaSE基础 day02</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/10/day01 基础环境配置/">JavaSE基础 day01</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 Mask
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
