@@ -1,255 +1,87 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
-  <title>Rorschach</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Rorschach | 做点好事，写进日记</title>
+
+  
+  <meta name="author" content="Mask">
+  
+
+  
   <meta name="description" content="MaskTaoX">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rorschach">
-<meta property="og:url" content="https://MaskTaoX.github.io/index.html">
-<meta property="og:site_name" content="Rorschach">
-<meta property="og:description" content="MaskTaoX">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rorschach">
-<meta name="twitter:description" content="MaskTaoX">
   
-    <link rel="alternative" href="/atom.xml" title="Rorschach" type="application/atom+xml">
+
   
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
   
-    <link rel="icon" href="/img/favicon.png">
+
+  <meta property="og:site_name" content="Rorschach"/>
+
   
+  <meta property="og:image" content="/favicon.ico"/>
   
-      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
-  
-  
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  
-  <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
-  <script>
-      var yiliaConfig = {
-          rootUrl: '/',
-          fancybox: true,
-          animate: true,
-          isHome: true,
-          isPost: false,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false
-      }
-  </script>
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Rorschach" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
+
+
 <body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            
-            <img lazy-src="/img/head.jpg" class="js-avatar">
-            
-        </a>
+<div class="blog">
+  <div class="content">
 
-        <hgroup>
-          <h1 class="header-author"><a href="/" title="Hi Mate">Mask</a></h1>
-        </hgroup>
-
-        
-        <p class="header-subtitle">做点好事，写进日记</p>
-        
-        
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/Home">博客首页</a></li>
-                        
-                            <li><a href="/works">作品展示</a></li>
-                        
-                            <li><a href="/about">留言打卡</a></li>
-                        
-                            <li><a href="/FrontEndGuide">前端导航</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fl mail" target="_blank" href="#" title="mail">mail</a>
-                            
-                                <a class="fl github" target="_blank" href="https://github.com/MaskTaoX" title="github">github</a>
-                            
-                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/学习/" style="font-size: 20px;">学习</a>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coolben.xyz/">Coolben</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://geoch.top/">Geo</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">啥也不会学开发</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Mask</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
-                
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="Me">Mask</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">做点好事，写进日记</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/Home">博客首页</a></li>
-                
-                    <li><a href="/works">作品展示</a></li>
-                
-                    <li><a href="/about">留言打卡</a></li>
-                
-                    <li><a href="/FrontEndGuide">前端导航</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a class="mail" target="_blank" href="#" title="mail">mail</a>
-                    
-                        <a class="github" target="_blank" href="https://github.com/MaskTaoX" title="github">github</a>
-                    
-                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-                    
-                </div>
-            </nav>
-        </header>                
-    </div>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-知乎 YJango 深度学习入门误区  学习纪录" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/" class="article-date">
-      <time datetime="2018-02-18T13:36:49.000Z" itemprop="datePublished">2018-02-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/">Yjango 深度学习入门误区 学习记录</a>
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Rorschach</a>
     </h1>
+    <p class="site-description">做点好事，写进日记</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/"><span>Yjango 深度学习入门误区 学习记录</span></a></h3>
+    
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-02-18T13:36:49.000Z">
+          2018-02-18
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p><strong> 原文链接：<a href="https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html" target="_blank" rel="noopener">https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html</a> </strong></p>
+        <p><strong> 原文链接：<a href="https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html" target="_blank" rel="noopener">https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html</a> </strong></p>
 <h1 id="深度学习的需要"><a href="#深度学习的需要" class="headerlink" title="深度学习的需要"></a>深度学习的需要</h1><ul>
 <li>学习就是建立预测模型的过程。  </li>
 <li>深度学习的所有输入输出都可以用矩阵来表示。(线性代数)  </li>
@@ -265,73 +97,65 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">x--&gt;f</span><br><span class="line">f--&gt;y</span><br></pre></td></tr></table></figure>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Deeplearning/">Deeplearning</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/Deeplearning/">Deeplearning</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/入门/">入门</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门/">入门</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/02/18/知乎 YJango 深度学习入门误区  学习纪录/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day13 包+几道练习 " class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/02/09/day13 包+几道练习 /" class="article-date">
-      <time datetime="2018-02-09T11:51:49.000Z" itemprop="datePublished">2018-02-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2018/02/09/day13 包+几道练习 /"><span>JavaSE基础 day13</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/09/day13 包+几道练习 /">JavaSE基础 day13</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/02/09/day13 包+几道练习 /" rel="bookmark">
+        <time class="entry-date published" datetime="2018-02-09T11:51:49.000Z">
+          2018-02-09
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="包-package"><a href="#包-package" class="headerlink" title="包(package)"></a>包(package)</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+        <h1 id="包-package"><a href="#包-package" class="headerlink" title="包(package)"></a>包(package)</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
 <li>对类文件进行分类管理。(类文件的重名很正常)</li>
 <li>对类提供多层命名(名称)空间。</li>
 <li>写在程序文件的第一行。</li>
@@ -345,211 +169,187 @@
 </blockquote>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2018/02/09/day13 包+几道练习 /#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day12 异常 " class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/21/day12 异常 /" class="article-date">
-      <time datetime="2017-12-21T13:51:49.000Z" itemprop="datePublished">2017-12-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/12/21/day12 异常 /"><span>JavaSE基础 day12</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/21/day12 异常 /">JavaSE基础 day12</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/12/21/day12 异常 /" rel="bookmark">
+        <time class="entry-date published" datetime="2017-12-21T13:51:49.000Z">
+          2017-12-21
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>异常：在运行时发生的不正常情况。<br>在java中用类的形式对不正常的情况进行描述和封装对象。描述不正常的情况的类，就成为异常类。<br>以前正常流程代码和问题处理代码相结合，现在将正常流程代码和问题处理代码分离，提高阅读性。<br>其实异常类就是java通过面向对象的思想将问题封装成了对象。用异常类对其进行描述。<br>不同的问题用不同的类进行具体的描述。比如角标越界，空指针等。</p>
+        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>异常：在运行时发生的不正常情况。<br>在java中用类的形式对不正常的情况进行描述和封装对象。描述不正常的情况的类，就成为异常类。<br>以前正常流程代码和问题处理代码相结合，现在将正常流程代码和问题处理代码分离，提高阅读性。<br>其实异常类就是java通过面向对象的思想将问题封装成了对象。用异常类对其进行描述。<br>不同的问题用不同的类进行具体的描述。比如角标越界，空指针等。</p>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/12/21/day12 异常 /#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day11 Object类" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/15/day11 Object类/" class="article-date">
-      <time datetime="2017-12-15T12:34:49.000Z" itemprop="datePublished">2017-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/12/15/day11 Object类/"><span>JavaSE基础 day11</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/15/day11 Object类/">JavaSE基础 day11</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/12/15/day11 Object类/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-12-15T12:34:49.000Z">
+          2017-12-15
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h1><p>object:所有类的根类。<br>Object是不断抽取而来的，具备着所有对象都具备的共性内容。</p>
+        <h1 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h1><p>object:所有类的根类。<br>Object是不断抽取而来的，具备着所有对象都具备的共性内容。</p>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/12/15/day11 Object类/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day10 内部类 " class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/08/day10 内部类 /" class="article-date">
-      <time datetime="2017-12-08T09:55:49.000Z" itemprop="datePublished">2017-12-08</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/12/08/day10 内部类 /"><span>JavaSE基础 day10</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/08/day10 内部类 /">JavaSE基础 day10</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/12/08/day10 内部类 /" rel="bookmark">
+        <time class="entry-date published" datetime="2017-12-08T09:55:49.000Z">
+          2017-12-08
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+        <h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>将一个类定义在另一个类里面，对里面那个类就称为内部类（内之类，嵌套类）。</li>
 <li>访问特点：<ul>
 <li>内部类可以直接访问外部类中的成员，包括私有成员。</li>
@@ -560,356 +360,316 @@
 <p><strong>作用：</strong><br>一般用于用于类的设计。<br>分析事物时，发现该事物A描述中还有事物B，而且这个事物B还在访问被描述事物A的内容，这时候就可以将事物B定义成内部类来描述。</p>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/12/08/day10 内部类 /#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day09 多态 " class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/06/day09 多态 /" class="article-date">
-      <time datetime="2017-12-06T13:57:09.000Z" itemprop="datePublished">2017-12-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/12/06/day09 多态 /"><span>JavaSE基础 day09</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/06/day09 多态 /">JavaSE基础 day09</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/12/06/day09 多态 /" rel="bookmark">
+        <time class="entry-date published" datetime="2017-12-06T13:57:09.000Z">
+          2017-12-06
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>定义：某一类事物的多种存在形态。简单说就是一个对象对应着不同类型。<br>多态在代码中的体现：父类或者接口的引用指向其子类的对象。</p>
+        <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>定义：某一类事物的多种存在形态。简单说就是一个对象对应着不同类型。<br>多态在代码中的体现：父类或者接口的引用指向其子类的对象。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象的多态性</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> 猫 <span class="keyword">extends</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> 狗 <span class="keyword">extends</span> 动物</span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function">pblic <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(string[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        猫 x = <span class="keyword">new</span> 猫();</span><br><span class="line">        动物 x = <span class="keyword">new</span> 猫();<span class="comment">//父类型指向子类对象，这是多态。一个对象，两种形态</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//猫这类事物即具备猫的形态，又具备动物的形态。这就是对象的多态性。</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/12/06/day09 多态 /#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day08 继承第二部分+接口" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/04/day08 继承第二部分+接口/" class="article-date">
-      <time datetime="2017-12-04T14:07:09.000Z" itemprop="datePublished">2017-12-04</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/12/04/day08 继承第二部分+接口/"><span>JavaSE基础 day08</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/04/day08 继承第二部分+接口/">JavaSE基础 day08</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/12/04/day08 继承第二部分+接口/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-12-04T14:07:09.000Z">
+          2017-12-04
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>抽象：笼统，模糊，不具体。<br>功能细节无法具体的方法，可以定义成抽象方法。类同理。</p>
+        <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>抽象：笼统，模糊，不具体。<br>功能细节无法具体的方法，可以定义成抽象方法。类同理。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DemoA</span> <span class="keyword">extends</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        system.out.println(<span class="string">"demoa show"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DemoB</span> <span class="keyword">extends</span> <span class="title">Demo</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        system.out.println(<span class="string">"demob show"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/12/04/day08 继承第二部分+接口/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day07 面向对象第二部分" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/29/day07 面向对象第二部分/" class="article-date">
-      <time datetime="2017-11-29T12:54:16.000Z" itemprop="datePublished">2017-11-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/11/29/day07 面向对象第二部分/"><span>JavaSE基础 day07</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/day07 面向对象第二部分/">JavaSE基础 day07</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/11/29/day07 面向对象第二部分/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-11-29T12:54:16.000Z">
+          2017-11-29
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="继承-父子类中的构造函数，子类的实例化过程"><a href="#继承-父子类中的构造函数，子类的实例化过程" class="headerlink" title="继承-父子类中的构造函数，子类的实例化过程"></a>继承-父子类中的构造函数，子类的实例化过程</h1><h2 id="子父类中构造函数的特点。"><a href="#子父类中构造函数的特点。" class="headerlink" title="子父类中构造函数的特点。"></a>子父类中构造函数的特点。</h2><p>在子类构造对象时，发现，访问子类构造函数时，父类业运行了。<br><strong>原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。</strong></p>
+        <h1 id="继承-父子类中的构造函数，子类的实例化过程"><a href="#继承-父子类中的构造函数，子类的实例化过程" class="headerlink" title="继承-父子类中的构造函数，子类的实例化过程"></a>继承-父子类中的构造函数，子类的实例化过程</h1><h2 id="子父类中构造函数的特点。"><a href="#子父类中构造函数的特点。" class="headerlink" title="子父类中构造函数的特点。"></a>子父类中构造函数的特点。</h2><p>在子类构造对象时，发现，访问子类构造函数时，父类业运行了。<br><strong>原因：在子类的构造函数中第一行有一个默认的隐式语句。super();其功能是调用父类空参数构造函数。</strong></p>
 <blockquote>
 <p>构造函数不存在覆盖。</p>
 </blockquote>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/11/29/day07 面向对象第二部分/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day06 数组工具类与单例设计模式 " class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/27/day06 数组工具类与单例设计模式 /" class="article-date">
-      <time datetime="2017-11-27T13:27:16.000Z" itemprop="datePublished">2017-11-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/11/27/day06 数组工具类与单例设计模式 /"><span>JavaSE基础 day06</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/27/day06 数组工具类与单例设计模式 /">JavaSE基础 day06</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/11/27/day06 数组工具类与单例设计模式 /" rel="bookmark">
+        <time class="entry-date published" datetime="2017-11-27T13:27:16.000Z">
+          2017-11-27
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="数组工具对象建立"><a href="#数组工具对象建立" class="headerlink" title="数组工具对象建立"></a>数组工具对象建立</h1><p>工具类，类中全是静态方法  </p>
+        <h1 id="数组工具对象建立"><a href="#数组工具对象建立" class="headerlink" title="数组工具对象建立"></a>数组工具对象建立</h1><p>工具类，类中全是静态方法  </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArrayTool</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ArrayTool</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectSort</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getMax</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>该类中方法都是静态，该类是不需要创建对象的，为了保证不让其被创建对象。可以将构造函数私有化。</strong>  </p>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/11/27/day06 数组工具类与单例设计模式 /#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
-
-
-
-
-
+  <article>
 
   
-    <article id="post-day05 继承" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/23/day05 继承/" class="article-date">
-      <time datetime="2017-11-23T13:47:23.000Z" itemprop="datePublished">2017-11-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+    <h3 class="article-title"><a href="/2017/11/23/day05 继承/"><span>JavaSE基础 day05</span></a></h3>
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/23/day05 继承/">JavaSE基础 day05</a>
-    </h1>
   
 
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/11/23/day05 继承/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-11-23T13:47:23.000Z">
+          2017-11-23
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="继承概述"><a href="#继承概述" class="headerlink" title="继承概述"></a>继承概述</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> <span class="keyword">extends</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="继承概述"><a href="#继承概述" class="headerlink" title="继承概述"></a>继承概述</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> <span class="keyword">extends</span> <span class="title">person</span></span></span><br><span class="line"><span class="class"></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>子类继承父类<br>继承的好处：</p>
 <ul>
 <li>提高了代码的复用性。</li>
@@ -918,125 +678,61 @@
 <hr>
 <ul>
 <li>
-          
-      
       
     </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
     
-    <div class="article-info article-info-index">
       
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JAVA/">JAVA</a>
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/JAVA/">JAVA</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/学习/">学习</a>
+    </span>
+    
+
     </div>
 
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2017/11/23/day05 继承/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
   </div>
-  
 </article>
 
 
 
 
-
-
-
-
-
+<nav class="pagination">
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  <a href="/page/2/" class="pagination-next">Next</a>
   
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                &copy; 2018 Mask
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
-            </div>
-        </div>
-        
-    </div>
+</nav>
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2018 Mask
+    
+  </p>
 </footer>
-
-    </div>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var backgroundnum = 24;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
-        };
-    })
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
-        });
-    });
-</script>
-
-
+    
   </div>
+</div>
 </body>
 </html>
