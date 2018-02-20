@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>虚拟机中使用Ubuntu | Rorschach | 做点好事，写进日记</title>
+
+  
+  <meta name="author" content="Mask">
+  
+
+  
+  <meta name="description" content="MaskTaoX">
+  
+
+  
+  
+  <meta name="keywords" content="入门">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="虚拟机中使用Ubuntu"/>
+
+  <meta property="og:site_name" content="Rorschach"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Rorschach" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Rorschach</a>
+    </h1>
+    <p class="site-description">做点好事，写进日记</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>虚拟机中使用Ubuntu</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/02/20/虚拟机中使用Ubuntu/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-02-20T13:47:49.000Z">
+          2018-02-20
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h3 id="常用软件安装"><a href="#常用软件安装" class="headerlink" title="常用软件安装"></a>常用软件安装</h3><ol>
+<li>设置服务器镜像源</li>
+<li>在启动栏添加终端图标</li>
+<li>apt终端命令</li>
+<li>谷歌浏览器 Chrome</li>
+<li>搜狗输入法</li>
+</ol>
+<h4 id="服务器镜像源"><a href="#服务器镜像源" class="headerlink" title="服务器镜像源"></a>服务器镜像源</h4><ul>
+<li>Ubuntu中大部分的软件安装更新都利用apt命令，从ubuntu的服务器直接安装的。</li>
+<li>ubuntu官方的服务器在国外，为了提高软件安装更新速度，ubuntu提供了选择最佳服务器功能，可以帮助我们方便的找到一个速度更快的镜像服务器！<blockquote>
+<p>所谓镜像服务器，就是所有服务器的内容都是相同的（镜像），但是根据所在的位置不同，速度不同，通常国内的服务器速度会快一些！</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+</the></li>
+</ul>
+<h4 id="设置ubuntu服务器步骤"><a href="#设置ubuntu服务器步骤" class="headerlink" title="设置ubuntu服务器步骤"></a>设置ubuntu服务器步骤</h4><ol>
+<li>进入系统设置</li>
+<li>打开软件和更新</li>
+<li>设置下载自…其他站点</li>
+<li>通过选择最佳服务器选择速度最快的镜像源 </li>
+</ol>
+<h4 id="在启动栏添加终端图标"><a href="#在启动栏添加终端图标" class="headerlink" title="在启动栏添加终端图标"></a>在启动栏添加终端图标</h4><ul>
+<li>ubuntu的启动栏类似于windows的任务栏，可以显示常用软件图标和正在运行软件图标。</li>
+<li>通常Linux的用户使用终端命令的频率非常高，所以会把终端添加到启动栏。</li>
+<li>通过最上方的搜索按钮可以搜索并启动需要使用的程序。</li>
+<li>点击右键可以保留删除或者移动启动栏中的图标。</li>
+<li>把常用的软件图标，保留在启动栏，可以方便快速启动程序。</li>
+</ul>
+<h4 id="apt终端命令"><a href="#apt终端命令" class="headerlink" title="apt终端命令"></a>apt终端命令</h4><ul>
+<li>apt(advanced packaging tool)，ubuntu下的安装包管理工具。</li>
+<li>常用命令：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">安装软件</span><br><span class="line">$ sudo apt install 软件名</span><br><span class="line"></span><br><span class="line">卸载软件</span><br><span class="line">$ sudo apt remove 软件名</span><br><span class="line"></span><br><span class="line">更新可用软件包列表</span><br><span class="line">$ sudo apt update</span><br><span class="line"></span><br><span class="line">更新已安装的包</span><br><span class="line">$ sudo apt upgrade</span><br></pre></td></tr></table></figure>
+<ul>
+<li>python程序员安装常用工具</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install ipython//交互式解释器</span><br><span class="line">$ sudo apt install ipython3</span><br><span class="line">$ sudo apt install python-pip//python包管理工具</span><br><span class="line">$ sudo apt install python3-pip</span><br></pre></td></tr></table></figure>
+<h4 id="删除不使用的软件"><a href="#删除不使用的软件" class="headerlink" title="删除不使用的软件"></a>删除不使用的软件</h4><ul>
+<li>libreoffice是一套类似于office的办公软件。</li>
+<li>Amazon是一个购物软件。</li>
+<li>卸载可以释放300M的磁盘空间。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt remove libreoffice-common</span><br><span class="line">$ sudo apt remove unity-webapps-common</span><br></pre></td></tr></table></figure>
+<h4 id="apt与apt-get"><a href="#apt与apt-get" class="headerlink" title="apt与apt-get"></a>apt与apt-get</h4><p>早期使用apt-get，从Ubuntu16开始官方建议使用apt。</p>
+<h4 id="deb安装格式"><a href="#deb安装格式" class="headerlink" title="deb安装格式"></a>deb安装格式</h4><p>deb是Debian linux的安装格式，在ubuntu中同样可以使用。要安装deb安装包，要使用dpkg这个终端命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -i&lt;package.deb&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="谷歌浏览器"><a href="#谷歌浏览器" class="headerlink" title="谷歌浏览器"></a>谷歌浏览器</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install libappindicator1 libindicator7 //谷歌浏览器需要的软件包</span><br><span class="line">$ sudo dpkg -i google-chrome-stable_current_amd64.deb // 安装包</span><br><span class="line">$ sudo apt -f install //当前系统中各个软件的依赖关系进行修复</span><br></pre></td></tr></table></figure>
+<h5 id="搜狗输入法"><a href="#搜狗输入法" class="headerlink" title="搜狗输入法"></a>搜狗输入法</h5><p>安装搜狗输入法需要基于fictx(小企鹅输入法)，是一个输入法平台。</p>
+<ol>
+<li>下载安装文件。</li>
+<li>打开系统设置，语言支持，将键盘输入法系统改为fcitx</li>
+<li>执行终端命令</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb</span><br><span class="line">$ sudo apt -f install</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/Linux/">Linux</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/入门/">入门</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2018 Mask
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>

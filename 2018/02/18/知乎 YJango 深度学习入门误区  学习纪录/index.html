@@ -96,7 +96,7 @@
 <li>y:对应的答案。</li>
 <li>难点:需要在未见过的任务上表现良好。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">x--&gt;f</span><br><span class="line">f--&gt;y</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">x--&gt;f</span><br><span class="line">f--&gt;y</span><br></pre></td></tr></table></figure>
 <ul>
 <li><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
@@ -157,8 +157,9 @@
 </ul>
 <h3 id="应用以上原则的技术，从先验知识的角度"><a href="#应用以上原则的技术，从先验知识的角度" class="headerlink" title="应用以上原则的技术，从先验知识的角度"></a>应用以上原则的技术，从先验知识的角度</h3><h3 id="迁移学习"><a href="#迁移学习" class="headerlink" title="迁移学习"></a>迁移学习</h3><p>利用因素共享这一特点，将一个任务中学到的关联应用于其他的任务中去。</p>
 <blockquote>
-<p>将已经训练好的，用于识别动物的神经网络的前几层这个f1拿出来，在识别植物的神经网络中，额外加两层再做轻微训练，同样适用，毕竟大家都是人眼，这部分的f1很大程度上是共享的。<br>这就是迁移学习。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">反光--f1--&gt;视网膜成像</span><br><span class="line">视网膜成像--f2--&gt;脑中概念</span><br></pre></td></tr></table></figure></p>
+<p>将已经训练好的，用于识别动物的神经网络的前几层这个f1拿出来，在识别植物的神经网络中，额外加两层再做轻微训练，同样适用，毕竟大家都是人眼，这部分的f1很大程度上是共享的。<br>这就是迁移学习。</p>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">反光--f1--&gt;视网膜成像</span><br><span class="line">视网膜成像--f2--&gt;脑中概念</span><br></pre></td></tr></table></figure>
 <h3 id="多任务学习"><a href="#多任务学习" class="headerlink" title="多任务学习"></a>多任务学习</h3><p>多任务学习其实和迁移学习使用的是相同的先验知识。多任务学习，是在训练的时候用共享着相同底层知识的其他任务的数据来帮助一起训练。可以起到扩充训练数据量的作用。同时寻找到的关联f更加优秀。因为三个不同的任务对底层的知识同时进行了约束。只有同时满足三个不同任务的关联f才会被采用，这就排除掉那些只符合单个任务的关联f。</p>
 <h3 id="跨层组合"><a href="#跨层组合" class="headerlink" title="跨层组合"></a>跨层组合</h3><p>这是另一条先验知识，我们知道前馈神经网络是不允许跨层组合的。<strong>残差网络</strong>就是拥有这种特点的神经网络。</p>
 <blockquote>
