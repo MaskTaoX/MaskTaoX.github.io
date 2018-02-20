@@ -84,37 +84,37 @@
     <div class="entry">
       
         <p><strong> 原文链接：<a href="https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html" target="_blank" rel="noopener">https://www.leiphone.com/news/201705/twh0WVrQ9sW9areZ.html</a> </strong></p>
-<h1 id="深度学习的需要"><a href="#深度学习的需要" class="headerlink" title="深度学习的需要"></a>深度学习的需要</h1><ul>
+<h2 id="深度学习的需要"><a href="#深度学习的需要" class="headerlink" title="深度学习的需要"></a>深度学习的需要</h2><ul>
 <li>学习就是建立预测模型的过程。  </li>
 <li>深度学习的所有输入输出都可以用矩阵来表示。(线性代数)  </li>
 <li>概率来提供决策的依据。</li>
 </ul>
-<h1 id="深度：为何高效"><a href="#深度：为何高效" class="headerlink" title="深度：为何高效"></a>深度：为何高效</h1><p>多层神经网络。</p>
-<h2 id="学习：寻找关联f的过程"><a href="#学习：寻找关联f的过程" class="headerlink" title="学习：寻找关联f的过程"></a>学习：寻找关联f的过程</h2><ul>
+<h2 id="深度：为何高效"><a href="#深度：为何高效" class="headerlink" title="深度：为何高效"></a>深度：为何高效</h2><p>多层神经网络。</p>
+<h3 id="学习：寻找关联f的过程"><a href="#学习：寻找关联f的过程" class="headerlink" title="学习：寻找关联f的过程"></a>学习：寻找关联f的过程</h3><ul>
 <li>x:问题描述。  </li>
 <li>f:解题的方法。  </li>
 <li>y:对应的答案。</li>
 <li>难点:需要在未见过的任务上表现良好。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">x--&gt;f</span><br><span class="line">f--&gt;y</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line"></span><br><span class="line">x--&gt;f</span><br><span class="line">f--&gt;y</span><br></pre></td></tr></table></figure>
 <ul>
 <li><a id="more"></a>
 <the rest="" of="" contents="" |="" 余下全文="">
 
 </the></li>
 </ul>
-<h2 id="关于f的寻找"><a href="#关于f的寻找" class="headerlink" title="关于f的寻找"></a>关于f的寻找</h2><p>能够拟合训练集的关联f并非唯一。</p>
+<h3 id="关于f的寻找"><a href="#关于f的寻找" class="headerlink" title="关于f的寻找"></a>关于f的寻找</h3><p>能够拟合训练集的关联f并非唯一。</p>
 <blockquote>
 <p>比如我想两个数字相加为1，我可以通过权重让一个数字为1，另一个为0，也可以一个是-299，另一个取300.</p>
 </blockquote>
-<h2 id="维度诅咒"><a href="#维度诅咒" class="headerlink" title="维度诅咒"></a>维度诅咒</h2><p>维度越大，我们越无法获取所得的情况。<br>面临没有见过的情况，一般是左右的情况平均一下。但是这种方法在高纬度数据下并不适用。</p>
-<h2 id="Distributed-Representation"><a href="#Distributed-Representation" class="headerlink" title="Distributed Representation"></a>Distributed Representation</h2><p>这就引入了第一个自然界的先验知识：<strong>并行组合</strong>。也就是深度学习中分布式表达distributed representation的思想。<br><img src="https://i.loli.net/2018/02/18/5a894f66ae010.png" alt="TIM截图20180218180202.png"></p>
+<h3 id="维度诅咒"><a href="#维度诅咒" class="headerlink" title="维度诅咒"></a>维度诅咒</h3><p>维度越大，我们越无法获取所得的情况。<br>面临没有见过的情况，一般是左右的情况平均一下。但是这种方法在高纬度数据下并不适用。</p>
+<h3 id="Distributed-Representation"><a href="#Distributed-Representation" class="headerlink" title="Distributed Representation"></a>Distributed Representation</h3><p>这就引入了第一个自然界的先验知识：<strong>并行组合</strong>。也就是深度学习中分布式表达distributed representation的思想。<br><img src="https://i.loli.net/2018/02/18/5a894f66ae010.png" alt="TIM截图20180218180202.png"></p>
 <ul>
 <li>原本需要8个不同的情况，现在只需要6个，这8个变体又是3种因素组合而成的。  </li>
 <li>图中椭圆这个factor实际上也是有变体，可以以相同的思路继续拆分，继续降低训练所需要的数据量。</li>
 </ul>
-<h2 id="No-Free-Lunch-Theorem（无免费午餐）"><a href="#No-Free-Lunch-Theorem（无免费午餐）" class="headerlink" title="No Free Lunch Theorem（无免费午餐）"></a>No Free Lunch Theorem（无免费午餐）</h2><p>既然关联f是无限的，那么寻找关联f好比是大海捞针。不同的机器学习算法只是更擅长在某个海域打捞而已。如果重点打捞某个区域，那么其他的区域就会被忽略。所以如果想要打捞的关联f可以存在于大海的任何地方，那么深度学习并不会比其他的机器学习算法更优秀。这种情况下，任何两个机器学习算法都是等价的。<br><strong>但是事实上并非如此，因为自然界中的很多任务，其关联f并非像我之前可以出现在大海当中的任何位置，而是会集中在特定海域，那些符合自然物理现象的特定海域。而深度学习就是擅长打捞该海域的机器学习算法。</strong></p>
-<h2 id="深层vs浅层"><a href="#深层vs浅层" class="headerlink" title="深层vs浅层"></a>深层vs浅层</h2><p>第二条先验知识：那就是<strong>迭代变换</strong>。</p>
+<h3 id="No-Free-Lunch-Theorem（无免费午餐）"><a href="#No-Free-Lunch-Theorem（无免费午餐）" class="headerlink" title="No Free Lunch Theorem（无免费午餐）"></a>No Free Lunch Theorem（无免费午餐）</h3><p>既然关联f是无限的，那么寻找关联f好比是大海捞针。不同的机器学习算法只是更擅长在某个海域打捞而已。如果重点打捞某个区域，那么其他的区域就会被忽略。所以如果想要打捞的关联f可以存在于大海的任何地方，那么深度学习并不会比其他的机器学习算法更优秀。这种情况下，任何两个机器学习算法都是等价的。<br><strong>但是事实上并非如此，因为自然界中的很多任务，其关联f并非像我之前可以出现在大海当中的任何位置，而是会集中在特定海域，那些符合自然物理现象的特定海域。而深度学习就是擅长打捞该海域的机器学习算法。</strong></p>
+<h3 id="深层vs浅层"><a href="#深层vs浅层" class="headerlink" title="深层vs浅层"></a>深层vs浅层</h3><p>第二条先验知识：那就是<strong>迭代变换</strong>。</p>
 <blockquote>
 <p>我们知道原子会形成分子，而事物是在原子所形成的分子的基础上，进一步迭代形成的，并非再从原子开始重新生成。飞机是由原子到分子再到各式各样的零件组合形成的。坦克同样也利用到了相同的分子层。虽然作为图片，坦克和飞机是不同的样本，但是他们都共享着相同的分子层。这意味着当你用深层神经网络时，训练飞机样本会间接的对坦克进行了训练，降低了训练所需要的数据量。   </p>
 </blockquote>
@@ -140,11 +140,11 @@
 <li><p>不同的神经网络变体，就在于你向其中加入了不同的先验知识。</p>
 </li>
 </ul>
-<h1 id="应用：设计理念"><a href="#应用：设计理念" class="headerlink" title="应用：设计理念"></a>应用：设计理念</h1><p>深层神经网络的优势就在于<strong>因素拆分，因素共享</strong>，设计神经网络基于这两点，前馈神经网络就是基于这两点的基本形式，但是神经网络并不仅限于这种形式。设计神经网络更像是玩乐高积木，但是玩的规则在于如何拆分因素，如何使不同的样本之间形成因素共享。所以在看到很多新的网络结构时，请务必考虑，他们的结构是如何考虑因素拆分和因素共享的。</p>
-<h2 id="时间共享-循环神经网络RNN"><a href="#时间共享-循环神经网络RNN" class="headerlink" title="时间共享 循环神经网络RNN"></a>时间共享 循环神经网络RNN</h2><blockquote>
+<h2 id="应用：设计理念"><a href="#应用：设计理念" class="headerlink" title="应用：设计理念"></a>应用：设计理念</h2><p>深层神经网络的优势就在于<strong>因素拆分，因素共享</strong>，设计神经网络基于这两点，前馈神经网络就是基于这两点的基本形式，但是神经网络并不仅限于这种形式。设计神经网络更像是玩乐高积木，但是玩的规则在于如何拆分因素，如何使不同的样本之间形成因素共享。所以在看到很多新的网络结构时，请务必考虑，他们的结构是如何考虑因素拆分和因素共享的。</p>
+<h3 id="时间共享-循环神经网络RNN"><a href="#时间共享-循环神经网络RNN" class="headerlink" title="时间共享 循环神经网络RNN"></a>时间共享 循环神经网络RNN</h3><blockquote>
 <p>以陶瓷的塑形为例，用循环层做时序预测，相当于使用转盘，摆出一个手型后，每个角度都是以这种手型去捏制的。</p>
 </blockquote>
-<h2 id="空间共享-卷积神经网络CNN"><a href="#空间共享-卷积神经网络CNN" class="headerlink" title="空间共享 卷积神经网络CNN"></a>空间共享 卷积神经网络CNN</h2><h2 id="作者提出的四个设计原则"><a href="#作者提出的四个设计原则" class="headerlink" title="作者提出的四个设计原则"></a>作者提出的四个设计原则</h2><p>设计神经网络实质上就是在对<strong>假设空间进行调整</strong>。也就是选择在哪些片海域寻找你的关联f。</p>
+<h3 id="空间共享-卷积神经网络CNN"><a href="#空间共享-卷积神经网络CNN" class="headerlink" title="空间共享 卷积神经网络CNN"></a>空间共享 卷积神经网络CNN</h3><h3 id="作者提出的四个设计原则"><a href="#作者提出的四个设计原则" class="headerlink" title="作者提出的四个设计原则"></a>作者提出的四个设计原则</h3><p>设计神经网络实质上就是在对<strong>假设空间进行调整</strong>。也就是选择在哪些片海域寻找你的关联f。</p>
 <ul>
 <li><p>增加共享，降低确定关联f所需要的数据量。如果你知道它大致在大海的哪个范围后，就可以使用更少的渔网，更快的打捞上来。</p>
 </li>
@@ -155,7 +155,7 @@
 <li><p>降低变体数，变体数量越多，我们就需要见到越多的数据。所以我们可以预处理数据，将变体数量在学习之前就降低下去。比如将数据减去平均值，除以均差。</p>
 </li>
 </ul>
-<h2 id="应用以上原则的技术，从先验知识的角度"><a href="#应用以上原则的技术，从先验知识的角度" class="headerlink" title="应用以上原则的技术，从先验知识的角度"></a>应用以上原则的技术，从先验知识的角度</h2><h3 id="迁移学习"><a href="#迁移学习" class="headerlink" title="迁移学习"></a>迁移学习</h3><p>利用因素共享这一特点，将一个任务中学到的关联应用于其他的任务中去。</p>
+<h3 id="应用以上原则的技术，从先验知识的角度"><a href="#应用以上原则的技术，从先验知识的角度" class="headerlink" title="应用以上原则的技术，从先验知识的角度"></a>应用以上原则的技术，从先验知识的角度</h3><h3 id="迁移学习"><a href="#迁移学习" class="headerlink" title="迁移学习"></a>迁移学习</h3><p>利用因素共享这一特点，将一个任务中学到的关联应用于其他的任务中去。</p>
 <blockquote>
 <p>将已经训练好的，用于识别动物的神经网络的前几层这个f1拿出来，在识别植物的神经网络中，额外加两层再做轻微训练，同样适用，毕竟大家都是人眼，这部分的f1很大程度上是共享的。<br>这就是迁移学习。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">反光--f1--&gt;视网膜成像</span><br><span class="line">视网膜成像--f2--&gt;脑中概念</span><br></pre></td></tr></table></figure></p>
 </blockquote>
